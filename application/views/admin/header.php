@@ -25,7 +25,7 @@ $user_name = ucfirst($this->session->userdata('uname'));
         <meta content="" name="description" />
         <meta content="" name="author" />
         <!-- end: META -->
-        <link rel="icon" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png" type="image/png">
+        <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
         <!-- start: GOOGLE FONTS -->
         <link rel="stylesheet" href="<?= base_url() ?>assets/css/googlefonts.css">
         <!--<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />-->
@@ -338,6 +338,21 @@ $user_name = ucfirst($this->session->userdata('uname'));
                                 </a>
                             </li>
                             <?php } ?>
+
+                            <?php if ($user_role == 'super_admin') { ?>
+                                <li class="<?= ($uri_segment == 'lobby_video') ? 'active' : ''; ?>" >
+                                    <a href="<?= site_url() ?>admin/lobby_video" id="dash">
+                                        <div class="item-content">
+                                            <div class="item-media">
+                                                <i class="fa fa-vimeo-square" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <span class="title">Lobby Video </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php } ?>
 							
                         </ul>
                     </nav>
@@ -356,7 +371,7 @@ $user_name = ucfirst($this->session->userdata('uname'));
                             <i class="ti-align-justify"></i>
                         </a>
                         <a class="navbar-brand" href="<?= base_url() ?>admin/dashboard">
-                            <img src="<?= base_url() ?>front_assets/images/FAUXSKO21/Forescout_Logo_CCPage.png" class="kent_logo" alt="Faux SKO 21 Logo" style="max-width: 200px"/>
+                            <img src="<?= base_url() ?>front_assets/agility/Agiliti_logo_transparent.png" class="kent_logo" alt="Faux SKO 21 Logo" style="max-width: 120px"/>
                         </a>
                         <a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
                             <i class="ti-align-justify"></i>
@@ -370,6 +385,11 @@ $user_name = ucfirst($this->session->userdata('uname'));
                     <!-- start: NAVBAR COLLAPSE -->
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-right">
+
+                            <li style="margin-top: 20px;margin-right: 15px;">
+                                <span style="color: green;font-weight: bold;">Total Users Online: <span id="online-users-count">--</span></span>
+                            </li>
+
                             <li class="dropdown current-user">
                                 <a href class="dropdown-toggle" data-toggle="dropdown">
                                     <img src="<?= base_url() ?>assets/images/Avatar.png" alt="admin"> <span class="username"><?=$user_name?> <i class="ti-angle-down"></i></i></span>
@@ -399,3 +419,38 @@ $user_name = ucfirst($this->session->userdata('uname'));
 
                 </header>
                 <!-- end: TOP NAVBAR -->
+
+<script>
+    function extract(variable) {
+        for (var key in variable) {
+            window[key] = variable[key];
+        }
+    }
+
+    $.get("<?=base_url()?>socket_config.php", function (data) {
+        var config = JSON.parse(data);
+        extract(config);
+
+        socket.on('activeUserListPerApp', function(data) {
+            if (data == null)
+                return;
+
+            var result = [];
+            var keys = Object.keys(data);
+            keys.forEach(function(key){
+                result.push(data[key]);
+            });
+            const mySet = new Set(result);
+            const uniqValuesArray = [...mySet];
+
+            $('#online-users-count').html(uniqValuesArray.length);
+        });
+
+        socket.emit('getActiveUserListPerApp', socket_app_name);
+
+        socket.on('userActiveChangeInApp', function() {
+            socket.emit('getActiveUserListPerApp', socket_app_name);
+        });
+
+    });
+</script>

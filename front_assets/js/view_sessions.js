@@ -61,15 +61,18 @@ function startCounting(){
         if(datetime_now_newyork >= session_start_datetime && datetime_now_newyork <= session_end_datetime)
             timeSpentUntilNow = timeSpentUntilNow+1;
         if (datetime_now_newyork > session_end_datetime){
-            saveTimeSpentOnSession();
+            //saveTimeSpentOnSession();
         }
     },1000);
 
-    Swal.fire(
-        'INFO',
-        'Be sure to unmute the player located on the bottom right side of the page.',
-        'warning'
-    );
+    if (session_reply != 1)
+    {
+        Swal.fire(
+            'INFO',
+            'Be sure to unmute the player located on the bottom right side of the page.',
+            'warning'
+        );
+    }
 
 }
 
@@ -1011,6 +1014,17 @@ socket.on('start_poll_timer_notification', (poll_app_name) => {
     if (poll_app_name == app_name)
         get_poll_vot_section();
 });
+
+socket.on('reload-attendee-signal', (appName) => {
+    if (appName == app_name)
+        location.reload();
+});
+
+socket.on('redirect-attendee-signal', (data) => {
+    if (data.appName == app_name)
+        if (zoom_redirect == 1)
+            window.open(zoom_redirect_url, "_blank") || window.location.replace(zoom_redirect_url);
+});
 /********* End of socket IO codes by Athul **********/
 
 
@@ -1032,25 +1046,25 @@ function calcTime(offset) {
 
 
 /****************** Zoom redirect after the session *********************/
-var seconds = remaining_seconds;
-function zoom_redirect_timer()
-{
-    if (seconds <= 0) {
-
-        if (session_type_id == 1 && zoom_redirect == 1)
-        {
-            window.open(zoom_redirect_url, "_blank") || window.location.replace(zoom_redirect_url);
-        }
-
-    } else {
-        seconds--;
-    }
-}
-$(document).ready(function () {
-    if (seconds <= 0) {
-        zoom_redirect_timer();
-    } else {
-        setInterval('zoom_redirect_timer()', 1000);
-    }
-});
+// var seconds = remaining_seconds;
+// function zoom_redirect_timer()
+// {
+//     if (seconds <= 0) {
+//
+//         if (session_type_id == 1 && zoom_redirect == 1)
+//         {
+//             window.open(zoom_redirect_url, "_blank") || window.location.replace(zoom_redirect_url);
+//         }
+//
+//     } else {
+//         seconds--;
+//     }
+// }
+// $(document).ready(function () {
+//     if (seconds <= 0) {
+//         zoom_redirect_timer();
+//     } else {
+//         setInterval('zoom_redirect_timer()', 1000);
+//     }
+// });
 /************* End of Zoom redirect after the session ******************/

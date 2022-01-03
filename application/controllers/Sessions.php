@@ -23,15 +23,53 @@ class Sessions extends CI_Controller {
 
     public function index() {
 
+        $today = date('Y-m-d');
+
+        if ($today < '2021-02-23')
+            $today = '2021-02-23';
+        if ($today > '2021-02-25')
+            $today = '2021-02-25';
+
+        redirect(base_url('sessions/getsessions_data/'.$today)); // Don't need to list all sessions, so redirecting to specific dates
+
+        //redirect('sessions/getsessions_data/'.$today);
         //$data["all_sessions_week"] = $this->objsessions->getSessionsWeekData();
         $data["all_sessions_week"] = $this->objsessions->getSessionsDays();
 
         if (!empty($data["all_sessions_week"])) {
-            $data["all_sessions"] = $this->objsessions->getsessions_data($data["all_sessions_week"][0]->sessions_date);
+            //$data["all_sessions"] = $this->objsessions->getsessions_data($data["all_sessions_week"][0]->sessions_date);
+            $data["all_sessions"] = $this->objsessions->getAllSessionsData();
         }
+
+
 
         $this->load->view('header');
         $this->load->view('sessions', $data);
+        $this->load->view('footer');
+    }
+
+    public function prework() {
+
+        $data["all_sessions"] = $this->objsessions->getAllPrework();
+
+        $this->load->view('header');
+        $this->load->view('prework', $data);
+        $this->load->view('footer');
+    }
+
+    public function event_extras() {
+
+        $data["all_sessions"] = $this->objsessions->getAllExcitingExtras();
+
+        $this->load->view('header');
+        $this->load->view('exciting_extras', $data);
+        $this->load->view('footer');
+    }
+
+    public function morning_wellness() {
+
+        $this->load->view('header');
+        $this->load->view('morning_wellness');
         $this->load->view('footer');
     }
 
@@ -68,8 +106,16 @@ class Sessions extends CI_Controller {
         $sesions = $this->objsessions->viewSessionsData($sessions_id);
 
         if (date("Y-m-d H:i:s") > date("Y-m-d H:i:s", strtotime($sesions->sessions_date . ' ' . $sesions->end_time))) {
-            header("location:" . base_url() . "sessions/session_end");
-            die();
+
+            if ($sesions->session_reply != 1)
+            {
+                header("location:" . base_url() . "sessions/session_end");
+                die();
+            }
+//            else{
+//                header("location:" . base_url() . "sessions/session_end");
+//                die();
+//            }
         }
 
         $header_data["sesions_logo"] = $sesions->sessions_logo;
@@ -87,6 +133,11 @@ class Sessions extends CI_Controller {
 
         $data['isMobile'] = $this->MobileDetect->isMobile();
 
+        $pubToken = "7ec658479b4a2e011a3dd11b510fa4a0bffc58aee2ebacf6ac7be6a18a31507d";
+        $streamName = $sesions->embed_html_code;
+        $data['millicast_config'] = $this->getMillicastToken($pubToken, $streamName);
+
+
         $this->load->view('header', $header_data);
         $this->load->view('view_sessions_optimized', $data);
 //        if ($this->MobileDetect->isMobile()){
@@ -97,14 +148,29 @@ class Sessions extends CI_Controller {
         $this->load->view('footer');
     }
 
+    private function getMillicastToken($pubToken, $streamName)
+    {
+        $ch = curl_init('https://director.millicast.com/api/director/publish'); // Initialise cURL
+        $post = json_encode(array('streamName'=>$streamName)); // Encode the data array into a JSON string
+        $authorization = "Authorization: Bearer ".$pubToken; // Prepare the authorisation token
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json' , $authorization )); // Inject the token into the header
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, 1); // Specify the request method as POST
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post); // Set the posted fields
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); // This will follow any redirects
+        $result = curl_exec($ch); // Execute the cURL statement
+        curl_close($ch); // Close the cURL connection
+        return json_decode($result); // Return the received data
+    }
+
     public function new_view($sessions_id) {
 
         $sesions = $this->objsessions->viewSessionsData($sessions_id);
 
-        if (date("Y-m-d H:i:s") > date("Y-m-d H:i:s", strtotime($sesions->sessions_date . ' ' . $sesions->end_time))) {
-            header("location:" . base_url() . "sessions/session_end");
-            die();
-        }
+//        if (date("Y-m-d H:i:s") > date("Y-m-d H:i:s", strtotime($sesions->sessions_date . ' ' . $sesions->end_time))) {
+//            header("location:" . base_url() . "sessions/session_end");
+//            die();
+//        }
 
         $header_data["sesions_logo"] = $sesions->sessions_logo;
         $header_data["sponsor_type"] = $sesions->sponsor_type;
@@ -119,9 +185,13 @@ class Sessions extends CI_Controller {
         $header_data["url_link"] = $sesions->url_link;
         $header_data["link_text"] = $sesions->link_text;
 
-        $this->load->view('header', $header_data);
+        $pubToken = "7ec658479b4a2e011a3dd11b510fa4a0bffc58aee2ebacf6ac7be6a18a31507d";
+        $streamName = $sesions->embed_html_code;
+        $data['millicast_config'] = $this->getMillicastToken($pubToken, $streamName);
+
+        //$this->load->view('header', $header_data);
         $this->load->view('view_sessions_new', $data);
-        $this->load->view('footer');
+        //$this->load->view('footer');
     }
 
     //This is a copy of view() method by Athul for testing new video streaming

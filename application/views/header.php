@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="shortcut icon" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png">
-        <title>Faux SKO 21</title>
+        <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
+        <title>Agiliti | 2022 Commercial Kickoff</title>
         <!-- Bootstrap Core CSS -->
         <link href="<?= base_url() ?>front_assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="<?= base_url() ?>front_assets/vendor/fontawesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
@@ -113,7 +113,7 @@
             }
 
             #mainMenu2 ul li a {
-                 color: white;
+                 color: #01426a;
              }
 
             #mainMenu2 ul li {
@@ -226,7 +226,7 @@
         <div class="wrapper">
             <!-- HEADER -->
             <header id="header" class="header-transparent header-sticky">
-                <div id="header-wrap">
+                <div id="header-wrap" style="background-color: white;">
                     <div class="container">
                         <!--LOGO-->
                         <?php
@@ -234,14 +234,14 @@
                             $profile_data = $this->common->get_user_details($this->session->userdata('cid'));
                             ?>
                             <div id="logo">
-                                <a href="<?= base_url() ?>home" class="logo" data-dark-logo="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png" style="margin-top: 12px; cursor: pointer">
-                                    <img src="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png" alt="FAUX SKO 21">
+                                <a href="<?= base_url() ?>home" class="logo" data-dark-logo="<?= base_url() ?>front_assets/agility/Agiliti_logo_transparent.png" style="margin-top: 12px; cursor: pointer">
+                                    <img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" alt="Agility" width="100px" style="height: unset;padding-bottom: unset;">
                                 </a>
                             </div>
                         <?php } else { ?>
                             <div id="logo">
-                                <a href="<?= base_url() ?>home" class="logo" data-dark-logo="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png">
-                                    <img src="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png" alt="FAUX SKO 21">
+                                <a href="<?= base_url() ?>home" class="logo" data-dark-logo="<?= base_url() ?>front_assets/agility/Agiliti_logo_transparent.png">
+                                    <img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" alt="Agility" width="100px" style="height: unset;padding-bottom: unset;">
                                 </a>
                             </div>
                         <?php } ?>
@@ -285,28 +285,40 @@
                                         </li>
                                     </ul>
 
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-envelope" style="font-size: 22px;" aria-hidden="true"></i> <span class="msg-noti-count badge badge-danger" style="display: none;background-color: #ee5656;margin-right: 0;">0</span>
-                                                <span class="caret"></span></a>
-                                            <ul class="unread-msgs-list dropdown-menu" style="position: absolute;margin-top: -20px;">
-                                                <li role="separator" class="msg-divider divider" style="margin-top: 0px;margin-bottom: 2px;"></li>
-                                                <li class="msg-mark-all-read" style="display: none;"><span style="color: black;cursor: pointer;"><i class="fas fa-check-double" style="color: #2290df;"></i> Mark all as read</span></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+<!--                                    <ul class="nav navbar-nav navbar-right">-->
+<!--                                        <li class="dropdown">-->
+<!--                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">-->
+<!--                                                <i class="fas fa-envelope" style="font-size: 22px;" aria-hidden="true"></i> <span class="msg-noti-count badge badge-danger" style="display: none;background-color: #ee5656;margin-right: 0;">0</span>-->
+<!--                                                <span class="caret"></span></a>-->
+<!--                                            <ul class="unread-msgs-list dropdown-menu" style="position: absolute;margin-top: -20px;">-->
+<!--                                                <li role="separator" class="msg-divider divider" style="margin-top: 0px;margin-bottom: 2px;"></li>-->
+<!--                                                <li class="msg-mark-all-read" style="display: none;"><span style="color: black;cursor: pointer;"><i class="fas fa-check-double" style="color: #2290df;"></i> Mark all as read</span></li>-->
+<!--                                            </ul>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
                                         <li><a href="https://yourconference.live/support/submit_ticket" target="_blank">SUPPORT</a></li>
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>lounge">LOUNGE</a></li>
+                                        <li><a href="<?= base_url() ?>front_assets/agility/2021+Commercial+Kickoff+Agenda+and+Session+Overview-compressed.pdf" target="_blank">AGENDA</a></li>
+                                    </ul>
+
+                                    <ul class="main-menu nav navbar-nav navbar-right">
+                                        <li><a href="<?= base_url() ?>front_assets/agility/2021_Commercial_Kickoff-Participant_Workbook.pdf" target="_blank">RESOURCES</a></li>
+                                    </ul>
+
+                                    <ul class="main-menu nav navbar-nav navbar-right">
+                                        <li><a href="<?= base_url() ?>sessions/event_extras">EVENT EXTRAS</a></li>
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
                                         <li><a href="<?= base_url() ?>sessions">SESSIONS</a></li>
+                                    </ul>
+
+                                    <ul class="main-menu nav navbar-nav navbar-right">
+                                        <li><a href="<?= base_url() ?>sessions/prework">PREWORK</a></li>
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right">

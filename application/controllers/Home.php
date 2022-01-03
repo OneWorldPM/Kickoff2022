@@ -27,10 +27,25 @@ class Home extends CI_Controller {
         //$this->load->view('footer');
 
         $data = array(
-            'profile_data' => $this->common->get_user_details($this->session->userdata('cid'))
+            'profile_data' => $this->common->get_user_details($this->session->userdata('cid')),
+            'lobby_video' => $this->getLobbyVideoDetails(),
+            'welcome_msg' => $this->welcomeMsg($this->session->userdata('cid'))
         );
 
         $this->load->view('home-new', $data);
+    }
+
+    function getLobbyVideoDetails()
+    {
+        $this->db->select('*');
+        $this->db->from('lobby_video');
+        $video = $this->db->get();
+        if ($video->num_rows() > 0)
+        {
+            return $video->result()[0];
+        }else{
+            return false;
+        }
     }
 
     public function newHome() {
@@ -91,5 +106,31 @@ class Home extends CI_Controller {
         else
             echo 'Sent message to ' . $to;
     }
+
+    public function welcomeMsg($user_id)
+    {
+        $this->db->select('*');
+        $this->db->from('welcome-msg-receipt');
+        $this->db->where('user_id', $user_id);
+        $welcomeMsgStatus = $this->db->get();
+        if ($welcomeMsgStatus->num_rows() > 0) {
+            return 'read';
+        } else {
+            return 'unread';
+        }
+    }
+
+    public function welcomeMsgMarkAsRead($user_id)
+    {
+        $data = array(
+            'user_id' => $user_id,
+            'read_date_time' => date("Y-m-d h:i:s")
+        );
+        $this->db->insert("welcome-msg-receipt", $data);
+        echo 'saved';
+
+        return;
+    }
+
 
 }

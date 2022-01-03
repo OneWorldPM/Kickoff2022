@@ -40,11 +40,11 @@ class User extends CI_Controller {
         $post = $this->input->post();
         $result = $this->muser->updateCustomer($post);
         if ($result == "0") {
-            header('location:' . base_url() . 'admin/user?msg=A'); //email or phone already Exist
+            header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=A'); //email or phone already Exist
         } else if ($result == "2") {
-            header('location:' . base_url() . 'admin/user?msg=E'); //Some Error
+            header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=E'); //Some Error
         } else {
-            header('location:' . base_url() . 'admin/user?msg=U'); //Register Success
+            header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=U'); //Register Success
         }
     }
 

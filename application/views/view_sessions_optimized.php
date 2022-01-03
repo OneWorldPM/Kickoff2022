@@ -25,8 +25,17 @@
 
                     <div id="embededVideo">
                         <div id="iframeDiv" class="row embed-responsive embed-responsive-16by9">
-                            <div style="padding:56.25% 0 0 0;"><iframe src="https://player.vimeo.com/video/492170037?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-                            <!-- isset($sessions) ? '<iframe src="https://viewer.millicast.com/v2?streamId=pYVHx2/'.str_replace(' ', '', $sessions->embed_html_code).'&autoPlay=true&muted=true&disableFull=true" width="100%" height="100%"></iframe>' : "" -->
+                            <?php
+                            if ($sessions->session_reply == 1)
+                            { ?>
+                                <div style="padding:56.25% 0 0 0;"><iframe src="https://player.vimeo.com/video/<?=$sessions->reply_video_id?>?loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                            <?php
+                            }else{ ?>
+                                <?=isset($sessions) ? '<iframe src="https://viewer.millicast.com/v2?streamId=pYVHx2/'.str_replace(' ', '', $sessions->embed_html_code).'&autoPlay=true&muted=true&disableFull=true" width="100%" height="100%"></iframe>' : "" ?>
+                            <?php
+                            }
+                            ?>
+
                         <div class="videoElement">
                             <span id="btnFS" class="glyphicon glyphicon-resize-full" data-toggle="tooltip" title="Full Screen"></span>
                         </div>
@@ -382,7 +391,6 @@ $datetime = date("Y-m-d H:i", strtotime($datetime));
 $datetime = new DateTime($datetime);
 $datetime1 = new DateTime();
 $remaining_seconds = $datetime->getTimestamp() - $datetime1->getTimestamp();
-
 ?>
 
 <script>
@@ -398,6 +406,10 @@ $remaining_seconds = $datetime->getTimestamp() - $datetime1->getTimestamp();
     var zoom_redirect = "<?=$sessions->zoom_redirect?>";
     var zoom_redirect_url = "<?=$sessions->zoom_redirect_url?>";
     var remaining_seconds = "<?=$remaining_seconds?>";
+    var remaining_seconds = "<?=$remaining_seconds?>";
+
+    let session_reply = "<?=$sessions->session_reply?>";
+
 
 
 </script>

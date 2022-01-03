@@ -139,7 +139,8 @@ $user_role = $this->session->userdata('role');
 													  <a href="<?= base_url() ?>admin/sessions/view_session/<?= $val->sessions_id ?>" class="btn btn-info btn-sm" style="margin-bottom: 5px;">View Session</a>
                                                         <a href="<?= base_url() ?>admin/sessions/edit_sessions/<?= $val->sessions_id ?>" class="btn btn-green btn-sm">Edit</a>
                                                         <?php if ($user_role == 'super_admin') { ?>
-                                                        <button class="reload-attendee btn btn-danger" app-name="<?=getAppName($val->sessions_id) ?>">Reload Attendee Page</button>
+                                                            <button class="reload-attendee btn btn-danger" app-name="<?=getAppName($val->sessions_id) ?>">Reload Attendee Page</button>
+                                                            <button class="redirect-attendee btn btn-warning" app-name="<?=getAppName($val->sessions_id) ?>" session-id="<?= $val->sessions_id ?>">Redirect</button>
                                                         <?php } ?>
                                                         </td>
                                                         <td>
@@ -226,6 +227,10 @@ switch ($msg) {
     $('.reload-attendee').on('click', function () {
         socket.emit('reload-attendee', $(this).attr('app-name'));
     });
+
+        $('.redirect-attendee').on('click', function () {
+            socket.emit('redirect-attendee', {appName: $(this).attr('app-name'), sessionId: $(this).attr('session-id')});
+        });
 
     });
 </script>

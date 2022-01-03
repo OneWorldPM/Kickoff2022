@@ -10,7 +10,7 @@ if (isset($_GET['testing']))
 
 <style>
     body{
-        background-image: url(<?= base_url() ?>front_assets/images/FAUXSKO21/3_ForescoutSKO_SessionsPage.png);
+        background-image: url(<?=base_url()?>front_assets/agility/Agility_main_page_backdrop.png);
         background-attachment: fixed;
         background-size: cover !important;
         background-position: center center !important;
@@ -79,9 +79,9 @@ if (isset($_GET['testing']))
     <div class="container container-fullscreen" style="min-height: 700px;">
         <div class="">
             <div class="row">
-                <div class="col-md-12 m-t-50" style="text-align: -webkit-center;">
+                <div class="col-md-12 m-t-50" style="text-align: -webkit-center;text-align: center;">
                     <?php
-                    if (isset($all_sessions_week) && !empty($all_sessions_week)) {
+                    if (isset($all_sessions_week) && !empty($all_sessions_week && 1==2)) { //disabled
                         $day = 1;
                         foreach ($all_sessions_week as $val) {
                             ?>
@@ -109,13 +109,36 @@ if (isset($_GET['testing']))
                         }
                     }
                     ?>
+                    <div class="col-md-12 m-b-60">
+
+                        <style>
+                            .date-btn{
+                                font-size: 40px;
+                                color: #012c4d !important;
+                                font-weight: 601;
+                                border-radius: unset !important;
+                                background-color: #f69240 !important;
+                                margin-right: 30px;
+                                padding-right: 40px;
+                                padding-left: 40px;
+                            }
+                            .selected-date-btn{
+                                color: white !important;
+                                background-color: #fd9f26 !important;
+                            }
+                        </style>
+                        <?php $current_date = $this->uri->segment(3); ?>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-23')?'selected-date-btn':''?>">February 23</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-24')?'selected-date-btn':''?>">February 24</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-25"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-25')?'selected-date-btn':''?>">February 25</button></a>
+                    </div>
                 </div> 
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <!-- CONTENT -->
                     <section class="content">
-                        <div class="container" style=" background: rgba(250, 250, 250, 0.95);">
+                        <div class="container"">
 
                             <!-- Blog post-->
                             <div class="post-content post-single"> 
@@ -125,26 +148,67 @@ if (isset($_GET['testing']))
                                 if (isset($all_sessions) && !empty($all_sessions)) {
                                     foreach ($all_sessions as $val) {
                                         ?>
-                                        <div class="post-item">
-                                            <div class="post-image col-md-3 m-t-20"> 
-                                                <a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a> 
+                                        <div class="post-item" style="background-color: white;padding-right: 25px;padding-left: 25px;">
+                                            <div class="post-image col-md-3 m-t-20">
+                                                <?php
+                                                if($val->sessions_date >= date('Y-m-d') && $val->sessions_id != 7)
+                                                { ?>
+                                                    <a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
+                                                    <?php
+                                                }else{ ?>
+                                                    <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>
+                                                    <?php
+                                                }
+                                                ?>
+
                                             </div>
                                             <div class="post-content-details col-md-9 m-t-30">
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> PT</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> CT</span>
+                                                        <?php
+                                                        if ($val->us_emea_switch == 1)
+                                                        { ?>
+                                                            <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> CT</span>
+                                                        <?php
+                                                        }
+
+
+                                                        if ($val->us_emea_switch == 1 && $val->apj_switch == 1)
+                                                        { ?>
                                                          /
+                                                        <?php
+                                                        }
+
+
+                                                        if ($val->apj_switch == 1)
+                                                        { ?>
                                                         <span style="color: #358080;">APJ <?= $val->sessions_date_display_apj . ' ' . date("h:i A", strtotime($val->start_time_display_apj))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_apj)) ?> AEDT</span>
+                                                        <?php
+                                                        }
+                                                        ?>
                                                     </h6>
-                                                    <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #0048ac; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                    <?php
+                                                    if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
+                                                    { ?>
+                                                        <?php if($val->sessions_id != 7){ ?>
+                                                        <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <?php }else{ ?>
+                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <?php }
+                                                    }else{ ?>
+                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <?php
+                                                    }
+                                                    ?>
                                                 </div>
                                                 <?php
                                                 if (isset($val->presenter) && !empty($val->presenter)) {
                                                     foreach ($val->presenter as $value) {
                                                         ?>
-                                                        <div class="post-info" style="color: #000 !important; font-size: larger; font-weight: 700;"><span class="post-autor"><a href="#" style="color: #000;" data-presenter_photo="<?= $value->presenter_photo ?>" data-presenter_name="<?= $value->presenter_name ?>" data-designation="<?= $value->designation ?>" data-email="<?= $value->email ?>" data-company_name="<?= $value->company_name ?>" data-twitter_link="<?= $value->twitter ?>" data-facebook_link="<?= $value->facebook ?>" data-linkedin_link="<?= $value->linkin ?>" data-bio="<?= $value->bio ?>"  class="presenter_open_modul" style="color: #337ab7;"><u><?= $value->presenter_name ?></u><?= ($value->degree != "") ? "," : "" ?> </a></span> <span class="post-category"> <?= $value->degree ?></span> </div>
-                                                        <div class="post-info" style="color: #000 !important; font-size: larger; font-weight: 700;"><span class="post-category"> <?= $value->company_name ?></span> </div>
+                                                        <div class="post-info" style="color: #000 !important; font-size: larger; font-weight: 700;"><span class="post-autor"><a href="#" style="color: #000;" data-presenter_id="<?= $value->presenter_id ?>" data-presenter_photo="<?= $value->presenter_photo ?>" data-presenter_name="<?= $value->presenter_name ?>" data-designation="<?= $value->designation ?>" data-email="<?= $value->email ?>" data-company_name="<?= $value->company_name ?>" data-twitter_link="<?= $value->twitter ?>" data-facebook_link="<?= $value->facebook ?>" data-linkedin_link="<?= $value->linkin ?>" data-bio="<?= $value->bio ?>"  class="presenter_open_modul" style="color: #337ab7;"><?= $value->presenter_name ?><?= ($value->degree != "") ? "," : "" ?> </a></span> <span class="post-category" style="font-size: 13px;font-weight: unset;color: #626262;"> <?= $value->company_name ?></span> </div>
+                                                        <!--<div class="post-info" style="color: #000 !important; font-size: larger; font-weight: 700;"><span class="post-category"> <?//= $value->company_name ?></span> </div>-->
                                                         <?php
                                                     }
                                                 }
@@ -153,7 +217,21 @@ if (isset($_GET['testing']))
                                                     <?= $val->sessions_description ?>
                                                 </div>
                                             </div>
-                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #002f70;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
+                                            <?php
+                                            if($val->session_reply == 1)
+                                            { ?>
+                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
+                                            <?php
+                                            }else{ ?>
+                                                <?php if($val->sessions_id != 7){ ?>
+                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
+                                                <?php }else{ ?>
+                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>
+                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;margin-right: 5px;" href="https://interactiveparty.zoom.us/j/84915974657?pwd=NVBGa3huaGhacmVvQW15S3BPN0NtZz09" target="_blank"><span>Bingo Room 1</span></a>
+                                                <?php } ?>
+                                            <?php
+                                            }
+                                            ?>
                                         </div>
                                         <?php
                                     }
@@ -170,7 +248,7 @@ if (isset($_GET['testing']))
     </div>
 </section>
 <div class="modal fade" id="modal" tabindex="-1" role="modal" aria-labelledby="modal-label" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="width: 730px;">
         <div class="modal-content">
             <div class="modal-header" style="padding: 0px;">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -179,33 +257,35 @@ if (isset($_GET['testing']))
                 <div class="row" style="padding-top: 10px; padding-bottom: 20px;">
                     <div class="col-sm-12">
                         <div class="col-sm-4" id="social_link_div_show">
-                            <div id="social_link_div" style="text-align: center; background-color: #ff095c; text-align: center; background-color: #ff095c; position: absolute; padding: 0px 50px 0px 50px; margin-top: 100px; border-bottom-left-radius: 41px; border-bottom-right-radius: 41px;">
-                                <ul style="list-style: none; display: inline-flex; padding-left: 0px; padding-top: 10px;">
-                                    <li data-placement="top" data-original-title="Twitter">
-                                        <a id="twitter_link" target="_blank">
-                                            <i class="fa fa-twitter" style="color: #fff;"></i>
-                                        </a>
-                                    </li>
-                                    <li data-placement="top" data-original-title="Facebook" style="padding-left: 15px; padding-right: 20px;">
-                                        <a id="facebook_link" target="_blank">
-                                            <i class="fa fa-facebook" style="color: #fff;"></i>
-                                        </a>
-                                    </li>
-                                    <li data-placement="top" data-original-title="LinkedIn">
-                                        <a id="linkedin_link" target="_blank">
-                                            <i class="fa fa-linkedin" style="color: #fff;"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+<!--                            <div id="social_link_div" style="text-align: center; background-color: #ff095c; text-align: center; background-color: #ff095c; position: absolute; padding: 0px 50px 0px 50px; margin-top: 100px; border-bottom-left-radius: 41px; border-bottom-right-radius: 41px;">-->
+<!--                                <ul style="list-style: none; display: inline-flex; padding-left: 0px; padding-top: 10px;">-->
+<!--                                    <li data-placement="top" data-original-title="Twitter">-->
+<!--                                        <a id="twitter_link" target="_blank">-->
+<!--                                            <i class="fa fa-twitter" style="color: #fff;"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li data-placement="top" data-original-title="Facebook" style="padding-left: 15px; padding-right: 20px;">-->
+<!--                                        <a id="facebook_link" target="_blank">-->
+<!--                                            <i class="fa fa-facebook" style="color: #fff;"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li data-placement="top" data-original-title="LinkedIn">-->
+<!--                                        <a id="linkedin_link" target="_blank">-->
+<!--                                            <i class="fa fa-linkedin" style="color: #fff;"></i>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
                             <img src="" id="presenter_profile" class="img-circle" style="height: 170px; width: 170px;">
 
 
                         </div>
                         <div class="col-sm-8" style="padding-top: 15px;">
                             <h3 id="presenter_title" style="font-weight: 700"></h3>
-                            <p style="border-bottom: 1px dotted; margin-bottom: 10px; padding-bottom: 10px;"><b style="color: #000;">Email </b> <span id="email" style="padding-left: 10px;"></span></p>
-                            <p style="border-bottom: 1px dotted; margin-bottom: 10px; padding-bottom: 10px;"><b style="color: #000;">Company </b> <span id="company" style="padding-left: 10px;"></span></p>
+                            <h6 id="presenter_designation" style="font-weight: 700"></h6>
+                            <p class="presenter-email-field" style="border-bottom: 1px dotted; margin-bottom: 10px; padding-bottom: 10px;"><b style="color: #000;">Email </b> <span id="email" style="padding-left: 10px;"></span></p>
+                            <p class="presenter-comapny-field" style="border-bottom: 1px dotted; margin-bottom: 10px; padding-bottom: 10px;"><b style="color: #000;">Company </b> <span id="company" style="padding-left: 10px;"></span></p>
+                            <p class="presenter-bio-field" style="border-bottom: 1px dotted; margin-bottom: 10px; padding-bottom: 10px;"><b style="color: #000;">Bio </b> <span id="bio" style="padding-left: 10px;"></span></p>
                         </div>
                     </div>
                 </div>
@@ -222,6 +302,7 @@ if (isset($_GET['testing']))
             $('#social_link_div').addClass('hidden');
         });
         $(".presenter_open_modul").click(function () {
+            var presenter_id = $(this).attr("data-presenter_id");
             var presenter_photo = $(this).attr("data-presenter_photo");
             var presenter_name = $(this).attr("data-presenter_name");
             var designation = $(this).attr("data-designation");
@@ -238,34 +319,80 @@ if (isset($_GET['testing']))
                     error: function ()
                     {
                         $('#presenter_profile').attr('src', "<?= base_url() ?>uploads/presenter_photo/presenter_avtar.png");
+                        $('#modal').modal('show');
                     },
                     success: function ()
                     {
                         $('#presenter_profile').attr('src', "<?= base_url() ?>uploads/presenter_photo/" + presenter_photo);
+                        $('#modal').modal('show');
                     }
                 });
             } else {
                 $('#presenter_profile').attr('src', "<?= base_url() ?>uploads/presenter_photo/presenter_avtar.png");
+                $('#modal').modal('show');
             }
-            if (designation != "" && designation != null) {
-                $('#presenter_title').text(presenter_name + ", " + designation);
+
+            if (presenter_name != "" && presenter_name != null) {
+                $('#presenter_title').text(presenter_name);
             } else {
                 $('#presenter_title').text(presenter_name);
             }
 
-            $('#email').text(email);
+            if (designation != "" && designation != null) {
+                $('#presenter_designation').html(designation);
+            } else {
+                $('#presenter_designation').html(designation);
+            }
+
+            if (email != "" && email != null &&
+                presenter_id != 9 &&
+                presenter_id != 10 &&
+                presenter_id != 11 &&
+                presenter_id != 12 &&
+                presenter_id != 6 &&
+                presenter_id != 7 &&
+                presenter_id != 21 &&
+                presenter_id != 22 &&
+                presenter_id != 23 &&
+                presenter_id != 20
+            )
+            {
+                $('.presenter-email-field').show();
+                $('#email').text(email);
+            }else{
+                $('.presenter-email-field').hide();
+            }
+
             if (company_name != "" && company_name != null) {
+                $('.presenter-comapny-field').show();
                 $('#company').text(company_name);
                 $('#company_lbl').text("Company");
             } else {
+                $('.presenter-comapny-field').hide();
                 $('#company').text("");
                 $('#company_lbl').text("");
             }
+
+            if(
+                bio != "" && bio != null &&
+                presenter_id != 6 &&
+                presenter_id != 7 &&
+                presenter_id != 21 &&
+                presenter_id != 22 &&
+                presenter_id != 23
+            ) {
+                $('.presenter-bio-field').show();
+                $('#bio').html(bio);
+            } else {
+                $('.presenter-bio-field').hide();
+                $('#bio').html("");
+            }
+
             $("#twitter_link").attr("href", twitter_link);
             $("#facebook_link").attr("href", facebook_link);
             $("#linkedin_link").attr("href", linkedin_link);
-            $("#bio_text").text(bio);
-            $('#modal').modal('show');
+            $("#bio_text").html(bio);
+
         });
     });
 </script>

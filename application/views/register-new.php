@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Faux SKO 21</title>
+    <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
+    <title>Agiliti | 2022 Commercial Kickoff</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>front_assets/login_template/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -65,12 +64,14 @@
 
 <div class="limiter">
     <div class="container-login100" style="background-image: url(<?=base_url()?>front_assets/images/FAUXSKO21/1_ForescoutSKO_LandingPage.png)">
-        <div class="wrap-login100">
-            <div class="login100-form-title"">
-            <img src="<?=base_url()?>front_assets/images/FAUXSKO21/FauxSKO_Featured_Image.png" style="width: 100%;height: auto;">
-        </div>
+        <div class="wrap-login100" style="text-align: center">
+            <div class="login100-form-title" style="background-color: #ececec;position: unset">
+                <img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" style="width: 50%;height: auto;background-color: #ececec;margin-top: 8px;margin-bottom: 8px;">
+            </div>
 
-        <form id="regForm" class="login100-form validate-form" method="post" action="<?= base_url() ?>register/add_customer">
+        <span style="display: inline-block;margin-top: 20px;color: #d50000;">Already registered? <a href="<?=base_url('login')?>" style="color: #d50000;"><u>Click here</u></a></span>
+
+        <form id="regForm" class="login100-form validate-form" method="post" action="<?= base_url() ?>register/add_customer" style="padding-top: 30px;">
 
             <div class="wrap-input100 validate-input m-b-26" data-validate="First name is required">
                 <span class="label-input100">First name</span>
@@ -396,7 +397,7 @@
         </form>
 
         <a href="<?=base_url()?>">
-            <button class="btn btn-secondary">
+            <button class="btn btn-secondary" style="float: left;">
                 Back
             </button>
         </a>
@@ -487,50 +488,50 @@ switch ($msg) {
 
     // When the user clicks on the password field, show the message box
     myInput.onfocus = function () {
-        document.getElementById("message").style.display = "block";
+        //document.getElementById("message").style.display = "block";
     }
 
     // When the user starts to type something inside the password field
-    myInput.onkeyup = function () {
-        // Validate lowercase letters
-        var lowerCaseLetters = /[a-z]/g;
-        if (myInput.value.match(lowerCaseLetters)) {
-            letter.classList.remove("invalid");
-            letter.classList.add("valid");
-        } else {
-            letter.classList.remove("valid");
-            letter.classList.add("invalid");
-        }
-
-        // Validate capital letters
-        var upperCaseLetters = /[A-Z]/g;
-        if (myInput.value.match(upperCaseLetters)) {
-            capital.classList.remove("invalid");
-            capital.classList.add("valid");
-        } else {
-            capital.classList.remove("valid");
-            capital.classList.add("invalid");
-        }
-
-        // Validate numbers
-        var numbers = /[0-9]/g;
-        if (myInput.value.match(numbers)) {
-            number.classList.remove("invalid");
-            number.classList.add("valid");
-        } else {
-            number.classList.remove("valid");
-            number.classList.add("invalid");
-        }
-
-        // Validate length
-        if (myInput.value.length >= 8) {
-            length.classList.remove("invalid");
-            length.classList.add("valid");
-        } else {
-            length.classList.remove("valid");
-            length.classList.add("invalid");
-        }
-    }
+    // myInput.onkeyup = function () {
+    //     // Validate lowercase letters
+    //     var lowerCaseLetters = /[a-z]/g;
+    //     if (myInput.value.match(lowerCaseLetters)) {
+    //         letter.classList.remove("invalid");
+    //         letter.classList.add("valid");
+    //     } else {
+    //         letter.classList.remove("valid");
+    //         letter.classList.add("invalid");
+    //     }
+    //
+    //     // Validate capital letters
+    //     var upperCaseLetters = /[A-Z]/g;
+    //     if (myInput.value.match(upperCaseLetters)) {
+    //         capital.classList.remove("invalid");
+    //         capital.classList.add("valid");
+    //     } else {
+    //         capital.classList.remove("valid");
+    //         capital.classList.add("invalid");
+    //     }
+    //
+    //     // Validate numbers
+    //     var numbers = /[0-9]/g;
+    //     if (myInput.value.match(numbers)) {
+    //         number.classList.remove("invalid");
+    //         number.classList.add("valid");
+    //     } else {
+    //         number.classList.remove("valid");
+    //         number.classList.add("invalid");
+    //     }
+    //
+    //     // Validate length
+    //     if (myInput.value.length >= 8) {
+    //         length.classList.remove("invalid");
+    //         length.classList.add("valid");
+    //     } else {
+    //         length.classList.remove("valid");
+    //         length.classList.add("invalid");
+    //     }
+    // }
 </script>
 
 </body>

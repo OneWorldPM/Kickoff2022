@@ -35,9 +35,9 @@
                                             <th>Profile</th>
                                             <th>Full Name</th>
                                             <th>Email</th>
-                                            <th>Password</th>
-                                            <th>Address</th>
-                                            <th>Country</th>
+<!--                                            <th>Password</th>-->
+<!--                                            <th>Address</th>-->
+<!--                                            <th>Country</th>-->
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -58,22 +58,24 @@
                                                         <?php } ?>
                                                     <td><?= $val->first_name . ' ' . $val->last_name ?></td>
                                                     <td><?= $val->email ?></td>
-                                                    <td><?= ($val->jti == '')?base64_decode($val->password):'***' ?></td>
-                                                    <td><?= $val->address ?></td>
-                                                    <td><?= $val->country ?></td>
-                                                    <td> 
-                                                        <a class="btn btn-danger btn-sm delete_presenter" href="<?= base_url() . 'admin/user/deleteuser/' . $val->cust_id ?>">
+                                                    <td>
+
+                                                        <a class="btn btn-warning btn-sm m-1" href="<?= base_url() . 'admin/user/editUser/' . $val->cust_id ?>">
+                                                            <i class="fa fa-edit"></i> Edit
+                                                        </a>
+
+                                                        <a class="btn btn-danger btn-sm delete_presenter m-1" href="<?= base_url() . 'admin/user/deleteuser/' . $val->cust_id ?>">
                                                             <i class="fa fa-trash-o"></i> Delete
                                                         </a>
-                                                        <a class="btn btn-primary btn-sm" href="<?= base_url() . 'admin/user/user_activity/' . $val->cust_id ?>">
+                                                        <a class="btn btn-primary btn-sm m-1" href="<?= base_url() . 'admin/user/user_activity/' . $val->cust_id ?>">
                                                             Activity
                                                         </a>
                                                         <?php if ($val->v_card != "") { ?>
-                                                            <a download class="btn btn-info btn-sm" href="<?= base_url() . 'uploads/upload_vcard/' . $val->v_card ?>">
+                                                            <a download class="btn btn-info btn-sm m-1" href="<?= base_url() . 'uploads/upload_vcard/' . $val->v_card ?>">
                                                                 vCard
                                                             </a>
                                                         <?php } else { ?>
-                                                            <a class="btn btn-info btn-sm" href="<?= base_url() . 'admin/exportvcard/' . $val->cust_id ?>">
+                                                            <a class="btn btn-info btn-sm m-1" href="<?= base_url() . 'admin/exportvcard/' . $val->cust_id ?>">
                                                                 vCard
                                                             </a>
                                                         <?php } ?>
@@ -94,6 +96,8 @@
     </div>
 </div>
 </div>
+
+
 <?php
 $msg = $this->input->get('msg');
 switch ($msg) {
@@ -121,6 +125,8 @@ switch ($msg) {
         $("#user").dataTable({
             "ordering": true,
         });
+
+
     });
 </script>
 

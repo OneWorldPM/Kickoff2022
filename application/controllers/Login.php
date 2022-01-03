@@ -65,7 +65,7 @@ class Login extends CI_Controller {
             $data = $this->objlogin->user_login($username,base64_encode($password));
             if ($data) {
 
-                if ($password == 'FauxSKO2021')
+                /*if ($password == 'Agiliti')
                 {
                     $token = sha1(md5(date("Y-m-d h:i")));
 
@@ -81,10 +81,10 @@ class Login extends CI_Controller {
 
                     echo json_encode($response);
                     return;
-                }
+                }*/
 
                 //check for the cookie
-                if (!isset($_COOKIE["yc_trusted_device_id"]) ||
+                /*if (!isset($_COOKIE["yc_trusted_device_id"]) ||
                     (isset($_COOKIE["yc_trusted_device_id"]) && !($this->checkTrustedBrowsers($data['cust_id'], $_COOKIE["yc_trusted_device_id"]))))
                 {
                     $phone = $this->getMaskedPhone($data['cust_id']);
@@ -110,7 +110,7 @@ class Login extends CI_Controller {
 
                     echo json_encode($response);
                     return;
-                }
+                }*/
 
 
                 $token = $this->objlogin->update_user_token($data['cust_id']);

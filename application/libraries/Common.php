@@ -13,7 +13,7 @@ class Common {
     }
 
     function set_timezone() {
-        date_default_timezone_set("US/Pacific"); //America/Dawson_Creek or Asia/Kolkata or America/Los_Angeles
+        date_default_timezone_set("America/Chicago"); // https://www.php.net/manual/en/timezones.php
     }
 
     function sendEmail($from, $to, $subject, $message, $name = NULL) {

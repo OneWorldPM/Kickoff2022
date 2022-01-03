@@ -65,16 +65,18 @@ class Forgotpassword extends CI_Controller {
 
             $link = base_url() . 'forgotpassword/changePassword?id=' . base64_encode($cust_data->cust_id);
 
-            $this->email->from('fauxsko21@yourconference.live', 'FauxSKO21');
+            $this->email->from('agiliti@yourconference.live', 'Agiliti');
             $this->email->to($email);
             //$this->email->cc('athullive@gmail.com');
             //$this->email->bcc('them@their-example.com');
 
             $this->email->subject('Recover your password');
 
-            $email_body = file_get_contents(base_url().'front_assets/email_templates/recover_password.php?link='.$link);
+            ///$email_body = file_get_contents(base_url().'front_assets/email_templates/recover_password.php?link='.$link);
 
-            $this->email->message($email_body);
+            $email_body = 'Please use this link for resetting the password: '.$link;
+
+                $this->email->message($email_body);
 
             $result = $this->email->send();
 

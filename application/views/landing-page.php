@@ -5,38 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png">
-
-    <title>Faux SKO 21</title>
+    <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
+    <title>Agility | 2021 Commercial Kickoff</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?=base_url()?>front_assets/login_template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="<?=base_url()?>front_assets/login_template/css/cover.css" rel="stylesheet">
+
+
+    <style>
+        .buttons-group{
+            margin-top: 440px;
+        }
+
+        .landing-buttons{
+            color: #014169;
+            background-color: #f08c40;
+            border-radius: unset;
+            font-weight: 600;
+            border: unset;
+            width: 140px;
+        }
+    </style>
 </head>
 
-<body class="text-center" style="background-image: url(<?=base_url()?>front_assets/images/FAUXSKO21/1_ForescoutSKO_LandingPage.png)">
+<body class="text-center" style="background-image: url(<?=base_url()?>front_assets/agility/Agility_background_v2.png); background-size: 100% auto">
 
-<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-<!--        <img class="" src="--><?//= base_url() ?><!--front_assets/images/FAUXSKO21/Forescout_Logo_CCPage.png">-->
-    </header>
+<div class="container">
+    <div class="row" style="margin-top: 10%">
+        <div class="col-md-12 text-center">
+            <img class="" src="<?= base_url() ?>front_assets/agility/Agility_banner_v2.png" style="width: 100%;">
+        </div>
+    </div>
 
-    <main role="main" class="inner cover" style="background-color: #1da2e3f0;padding: 0;">
-<!--        <h1 class="cover-heading">Faux SKO Sales Kickoff 2021</h1>-->
-        <img src="<?=base_url()?>front_assets/images/FAUXSKO21/FauxSKO_Featured_Image.png" style="width: 100%;">
-        <p class="lead" style="font-size: 2rem;">We will miss seeing your faces,</p>
-        <p class="lead" style="font-size: 1.93rem;">but this virtual version will cover all the bases.</p>
-        <p class="lead">
-            <a href="<?=base_url()?>login" class="btn btn-lg btn-secondary shadow-sm" style="color: white;background-color: #002f70;">Login</a>
-<!--            <a href="--><?//=base_url()?><!--register" class="btn btn-lg btn-secondary shadow-sm" style="color: #0e306c;">Register</a>-->
-        <p class="lead" style="font-size: 15px;"><a href="/support/submit_ticket/displayForm" target="_blank"><i class="far fa-life-ring"></i> SUPPORT</a></p>
-        </p>
-    </main>
-
-    <footer class="mastfoot mt-auto">
-    </footer>
+    <div class="row" style="margin-top: 10%">
+        <div class="col-md-12">
+            <a href="<?=base_url()?>login" class="btn btn-lg btn-secondary shadow-sm landing-buttons" style="">Login</a>
+        </div>
+    </div>
 </div>
 
 

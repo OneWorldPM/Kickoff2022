@@ -109,62 +109,65 @@
 
 
         /************ Auto redirect to next zoom meeting ***************/
-        $.ajax({
-            url: "<?= base_url() ?>sessions/getImmediateMeeting",
-            type: "post",
-            dataType: "json",
-            success: function (data) {
-
-                if (data.session.zoom_redirect == 1)
-                {
-                    var zoom_meet_rem_seconds = data.remaining_seconds;
-
-                    if (data.remaining_seconds <= 0) {
-                        Swal.fire(
-                            data.session.session_title,
-                            'You will be redirected the Zoom meeting in 60 seconds <br>' +
-                            '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
-                            'info'
-                        );
-                        setTimeout(function () {
-                            window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
-                        }, 60000);
-
-                    } else if(data.remaining_seconds <= 60) {
-                        Swal.fire(
-                            data.session.session_title,
-                            'You will be redirected the Zoom meeting in 60 seconds <br>' +
-                            '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
-                            'info'
-                        );
-                        setTimeout(function () {
-                            window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
-                        }, 60000);
-
-                    }else {
-                        setInterval(function () {
-
-                            if (data.remaining_seconds == 60) {
-                                Swal.fire(
-                                    data.session.session_title,
-                                    'You will be redirected the Zoom meeting in 60 seconds <br>' +
-                                    '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
-                                    'info'
-                                );
-                            }
-
-                            if (data.remaining_seconds <= 0) {
-
-                                window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
-
-                            } else {
-                                data.remaining_seconds--;
-                            }
-                        }, 1000);
-                    }
-                }
-            }
-        });
+        //$.ajax({
+        //    url: "<?//= base_url() ?>//sessions/getImmediateMeeting",
+        //    type: "post",
+        //    dataType: "json",
+        //    success: function (data) {
+        //
+        //        if (data.status == true)
+        //        {
+        //            if (data.session.zoom_redirect == 1)
+        //            {
+        //                var zoom_meet_rem_seconds = data.remaining_seconds;
+        //
+        //                if (data.remaining_seconds <= 0) {
+        //                    Swal.fire(
+        //                        data.session.session_title,
+        //                        'You will be redirected the Zoom meeting in 60 seconds <br>' +
+        //                        '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
+        //                        'info'
+        //                    );
+        //                    setTimeout(function () {
+        //                        window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
+        //                    }, 60000);
+        //
+        //                } else if(data.remaining_seconds <= 60) {
+        //                    Swal.fire(
+        //                        data.session.session_title,
+        //                        'You will be redirected the Zoom meeting in 60 seconds <br>' +
+        //                        '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
+        //                        'info'
+        //                    );
+        //                    setTimeout(function () {
+        //                        window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
+        //                    }, 60000);
+        //
+        //                }else {
+        //                    setInterval(function () {
+        //
+        //                        if (data.remaining_seconds == 60) {
+        //                            Swal.fire(
+        //                                data.session.session_title,
+        //                                'You will be redirected the Zoom meeting in 60 seconds <br>' +
+        //                                '<a href="'+data.session.zoom_redirect_url+'" target="_blank">Please click here to go there now.</a>',
+        //                                'info'
+        //                            );
+        //                        }
+        //
+        //                        if (data.remaining_seconds <= 0) {
+        //
+        //                            window.open(data.session.zoom_redirect_url, "_blank") || window.location.replace(data.session.zoom_redirect_url);
+        //
+        //                        } else {
+        //                            data.remaining_seconds--;
+        //                        }
+        //                    }, 1000);
+        //                }
+        //            }
+        //        }
+        //    }
+        //});
         /************ End of auto redirect to next zoom meeting ***************/
 
     });
@@ -200,7 +203,7 @@
                     //    '<a href="<?//= base_url() ?>//sponsor/view/' + message.sponsor_id + '" target="_blank">' + message.text + '</a>');
                 }else{
                     $('.unread-msgs-list').prepend('' +
-                        '<li class="msg-item"><a href="lounge" style="color: black"><strong>'+message.from_name+'</strong> <i class="fas fa-angle-right"></i> '+messageText+'</a></li>');
+                        '<li class="msg-item"><a href="<?= base_url() ?>lounge" style="color: black"><strong>'+message.from_name+'</strong> <i class="fas fa-angle-right"></i> '+messageText+'</a></li>');
                 }
 
 

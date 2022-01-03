@@ -110,7 +110,7 @@ $user_role = $this->session->userdata('role');
                                     <hr style="border: 2px solid;"/>
 
                                 <div class="form-group" <?=($user_role != 'super_admin')?'style="display:none"':''?>>
-                                    <label class="text-large text-bold">Session Date Display (US/EMEA)</label>
+                                    <label class="text-large text-bold">Session Date Display (US/EMEA) <span style="color: green;">ON</span><input type="radio" name="us_emea_switch" id="us_emea_switch_on" value="1" <?=(isset($sessions_edit->us_emea_switch) && $sessions_edit->us_emea_switch == 1)?'checked':''?>> | <span style="color: red;">OFF</span><input type="radio" name="us_emea_switch" id="us_emea_switch_off" value="0" <?=(isset($sessions_edit->us_emea_switch) && $sessions_edit->us_emea_switch == 0)?'checked':''?>></label>
                                     <input class="form-control <?=($user_role != 'super_admin')?'':'datepicker'?>" name="sessions_date_display_us_emea" id="sessions_date_display_us_emea" type="text" value="<?= (isset($sessions_edit->sessions_date_display_us_emea) && !empty($sessions_edit->sessions_date_display_us_emea)) ? date('m/d/Y', strtotime($sessions_edit->sessions_date_display_us_emea)) : "" ?>" <?=($user_role != 'super_admin')?'readonly':''?>>
                                 </div>
                                 <div class="row" <?=($user_role != 'super_admin')?'style="display:none"':''?>>
@@ -129,7 +129,7 @@ $user_role = $this->session->userdata('role');
                                 </div>
 
                                 <div class="form-group" <?=($user_role != 'super_admin')?'style="display:none"':''?>>
-                                    <label class="text-large text-bold">Session Date Display (APJ)</label>
+                                    <label class="text-large text-bold">Session Date Display (APJ) <span style="color: green;">ON</span><input type="radio" name="apj_switch" id="apj_switch_on" value="1" <?=(isset($sessions_edit->apj_switch) && $sessions_edit->apj_switch == 1)?'checked':''?>> | <span style="color: red;">OFF</span><input type="radio" name="apj_switch" id="apj_switch_off" value="0" <?=(isset($sessions_edit->apj_switch) && $sessions_edit->apj_switch == 0)?'checked':''?>></label>
                                     <input class="form-control <?=($user_role != 'super_admin')?'':'datepicker'?>" name="sessions_date_display_apj" id="sessions_date_display_apj" type="text" value="<?= (isset($sessions_edit->sessions_date_display_apj) && !empty($sessions_edit->sessions_date_display_apj)) ? date('m/d/Y', strtotime($sessions_edit->sessions_date_display_apj)) : "" ?>" <?=($user_role != 'super_admin')?'readonly':''?>>
                                 </div>
                                 <div class="row" <?=($user_role != 'super_admin')?'style="display:none"':''?>>
@@ -191,9 +191,30 @@ $user_role = $this->session->userdata('role');
                                         <div class="form-group">
                                             <label class="text-large text-bold">Redirect URL(must be prefixed with http or https)</label>
                                             <input type="text" name="zoom_redirect_url" id="zoom_redirect_url" value="<?= (isset($sessions_edit->zoom_redirect_url) && !empty($sessions_edit->zoom_redirect_url) ) ? $sessions_edit->zoom_redirect_url : "" ?>" class="form-control" placeholder="Zoom redirect url">
+                                            <small style="color: darkred;">To test Zoom redirect; Go to <a href="<?=base_url()?>sessions/attend/<?= $sessions_edit->sessions_id ?>?testing" target="_blank"><?=base_url()?>sessions/attend/<?= $sessions_edit->sessions_id ?>?testing</a>  as an <span style="color: blue;">attendee</span> and wait 5 seconds(countdown is set to 5 seconds for testing)</small>
                                         </div>
                                     </div>
 
+                                </div>
+
+                                <hr style="border: 2px solid;"/>
+
+                                <div class="row" <?=($user_role != 'super_admin')?'style="display:none"':''?>>
+                                    <label class="col-md-12 text-large text-bold">Recorded Session Reply</label>
+                                    <div class="form-group col-md-6" style="color: #000;">
+                                        <input type="radio" class="col-md-1"  name="session_reply"  id="session_reply_on" <?=(isset($sessions_edit->session_reply) && $sessions_edit->session_reply == "1") ?'checked':''?> value="1">ON<br>
+                                    </div>
+                                    <div class="form-group col-md-6" style="color: #000;">
+                                        <input type="radio" class="col-md-1"  name="session_reply"  id="session_reply_off" <?=(isset($sessions_edit->session_reply) && $sessions_edit->session_reply == "0") ?'checked':''?>  value="0">OFF<br>
+                                    </div>
+
+                                    <div class="col-md-12" id="reply_video_id">
+                                        <div class="form-group">
+                                            <label class="text-large text-bold">Vimeo Video ID <small> (Only Vimeo video ID (eg; 331466789) is supported)</small></label>
+                                            <input type="text" name="reply_video_id" id="reply_video_id" value="<?= (isset($sessions_edit->reply_video_id) && !empty($sessions_edit->reply_video_id) ) ? $sessions_edit->reply_video_id : "" ?>" class="form-control" placeholder="eg; 331466789">
+                                            <small style="color: #858585;">In <span style="color: #302b6f;">https://vimeo.com/331466789</span> <span style="color: #046f2d;">331466789</span> is the video ID</small>
+                                        </div>
+                                    </div>
                                 </div>
 
                                     <hr style="border: 2px solid;"/>
@@ -431,6 +452,8 @@ $user_role = $this->session->userdata('role');
 </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 <script type="text/javascript">
     $(document).ready(function ()
     {
@@ -532,6 +555,20 @@ $user_role = $this->session->userdata('role');
             }
         });
     });
+
+
+        $('input[type=radio][name=session_reply]').change(function() {
+            if (this.value == 1) {
+                Swal.fire(
+                    'Be Careful!',
+                    'You just enabled Recorded Session Reply feature!<br>' +
+                    'This option will prevent user from entering live sessions and instead show the recorded Vimeo video on the view page.<br>' +
+                    'Make sure Vimeo video ID is properly added.',
+                    'warning'
+                )
+            }
+        });
+
 
 
     });

@@ -2,12 +2,12 @@
 /* CHANE IT BY REPLEACING THE VALUE ABOVE */
 
 ::-moz-selection {
- background: #002f70;
+ background: #b3d3ff;
  color: #333;
  text-shadow: none;
 }
 ::selection {
-	background: #002f70;
+	background: #b3d3ff;
 	text-shadow: none;
 	color: #333;
 }

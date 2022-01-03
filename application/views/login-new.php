@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Faux SKO 21</title>
+    <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
+    <title>Agiliti | 2022 Commercial Kickoff</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>front_assets/login_template/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -55,10 +54,10 @@
 <body>
 
 <div class="limiter">
-    <div class="container-login100" style="background-image: url(<?=base_url()?>front_assets/images/FAUXSKO21/1_ForescoutSKO_LandingPage.png)">
+    <div class="container-login100" style="background-image: url(<?=base_url()?>front_assets/agility/Agility_login_background.png)">
         <div class="wrap-login100">
-            <div class="login100-form-title"">
-					<img src="<?=base_url()?>front_assets/images/FAUXSKO21/FauxSKO_Featured_Image.png" style="width: 100%;height: auto;">
+            <div class="login100-form-title" style="background-color: #ececec;position: unset">
+					<img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" style="width: 50%;height: auto;background-color: #ececec;margin-top: 8px;margin-bottom: 8px;">
             </div>
 
             <form class="login100-form validate-form" method="post" action="<?= base_url() ?>login/authentication">
@@ -89,9 +88,13 @@
                     </div>
                 </div>
 
+<!--                <div class="container-login100-form-btn">-->
+<!--                <a style="cursor: pointer" id="login-btn"><img src="--><?//=base_url()?><!--front_assets/agility/agility_login_button.png" style="height: 50px; width: 150px"> </a>-->
+<!--                </div>-->
+
                 <div class="container-login100-form-btn">
-                    <button id="login-btn" class="login100-form-btn" disabled>
-                        Login
+                    <button id="login-btn" class="btn " style="height: 50px; width: 150px; background-color: #fd7e14; color: #104767; border: #00A8F5 3px solid; font-weight: 800" disabled>
+                        L O G I N
                     </button>
                 </div>
             </form>

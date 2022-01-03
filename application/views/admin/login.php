@@ -13,7 +13,7 @@
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-        <link rel="icon" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png" type="image/png">
+        <link rel="icon" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta content="" name="description" />
@@ -80,7 +80,7 @@
                     <form class="form-login" id="frm_login" name="frm_login" method="post" action="<?= base_url() ?>admin/alogin/authentication">
                         <div class="row">
                             <div style="text-align: center">                           
-                                <img src="<?= base_url() ?>front_assets/images/FAUXSKO21/Forescout_Logo_CCPage.png" alt="admin" >
+                                <img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" alt="admin" >
                             </div>
                         </div>
                         <fieldset>

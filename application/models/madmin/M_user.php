@@ -94,13 +94,20 @@ class M_user extends CI_Model {
 
     function updateCustomer($post) {
         $set = array(
-            'fullname' => trim($post['full_name']),
+            'first_name' => trim($post['first_name']),
+            'last_name' => trim($post['last_name']),
+            'title' => trim($post['title']),
+            'job_type' => trim($post['job_type']),
+            'region' => trim($post['region']),
             'phone' => trim($post['phone']),
-            'country' => trim($post['country']),
+            'email' => trim($post['email']),
             'status' => 1
         );
         $this->db->update("customer_master", $set, array('cust_id' => $post['cid']));
-        return "1";
+
+        if($this->db->affected_rows() > 0)
+            return 1;
+        return 0;
     }
 
     function generateRandomString($length = 6) {

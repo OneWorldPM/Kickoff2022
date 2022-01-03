@@ -52,12 +52,12 @@
                                                     <tr>
                                                         <td><?= date("Y-m-d", strtotime($val->notification_date)) ?></td>
                                                         <td><?= $val->message ?></td>
-<!--                                                        <td>
+                                                        <td>
                                                             <?php if ($val->status == 1) { ?>
-                                                                <label class="label label-primary">Sent</label>
+                                                                <a class="btn btn-warning btn-sm stop_notification" data-id="<?= $val->push_notification_id ?>" href="#">
+                                                                    <i class="fa fa-ban"></i> Stop Notification
+                                                                </a>
                                                             <?php } ?>
-                                                        </td>-->
-                                                        <td> 
                                                             <?php if ($val->status == 0) { ?>
                                                                 <a class="btn btn-success btn-sm send_notification" data-id="<?= $val->push_notification_id ?>" href="#">
                                                                     <i class="fa fa-send"></i> Send Notification
@@ -137,8 +137,7 @@ switch ($msg) {
 
         $(document).on("click", ".send_notification", function () {
             var send_notification_id = $(this).attr('data-id');
-            $(this).hide();
-            $(".send_notification").prop('disabled', true);
+
             $this = $(this);
             if (send_notification_id != '') {
                 $.ajax({
@@ -147,34 +146,68 @@ switch ($msg) {
                     dataType: "json",
                     success: function (response) {
                         cr_data = response;
-                        console.log(cr_data);
                         if (cr_data.status == "success")
                         {
                             if (socket){
                                 socket.emit('send_push_notification', app_name_main);
+
+                                location.reload();
                             }else{
                                 alertify.error('Socket config not found, notification might not have been sent!');
                             }
 
-                            var delayInMilliseconds = 30000; //1 second
-                            setTimeout(function () {
+
+
+                            //var delayInMilliseconds = 30000; //1 second
+                            //setTimeout(function () {
+                            //    socket.emit('close_push_notification', app_name_main);
+                            //    $.ajax({
+                            //        url: "<?//= base_url() ?>//admin/push_notifications/close_notification/" + send_notification_id,
+                            //        type: "post",
+                            //        dataType: "json",
+                            //        success: function (response) {
+                            //            cr_data = response;
+                            //            console.log(cr_data);
+                            //            if (cr_data.status == "success")
+                            //            {
+                            //                $this.show();
+                            //                $(".send_notification").prop('disabled', false);
+                            //            }
+                            //            $(".send_notification").prop('disabled', false);
+                            //        }
+                            //    });
+                            //}, delayInMilliseconds);
+                        }
+                    }
+                });
+            } else {
+                alertify.error('Something went wrong, Please try again!');
+            }
+        });
+
+
+        $(document).on("click", ".stop_notification", function () {
+            var send_notification_id = $(this).attr('data-id');
+
+            if (send_notification_id != '') {
+                $.ajax({
+                    url: "<?= base_url() ?>admin/push_notifications/close_notification/" + send_notification_id,
+                    type: "post",
+                    dataType: "json",
+                    success: function (response) {
+                        cr_data = response;
+
+                        if (cr_data.status == "success")
+                        {
+                            if (socket){
                                 socket.emit('close_push_notification', app_name_main);
-                                $.ajax({
-                                    url: "<?= base_url() ?>admin/push_notifications/close_notification/" + send_notification_id,
-                                    type: "post",
-                                    dataType: "json",
-                                    success: function (response) {
-                                        cr_data = response;
-                                        console.log(cr_data);
-                                        if (cr_data.status == "success")
-                                        {
-                                            $this.show();
-                                            $(".send_notification").prop('disabled', false);
-                                        }
-                                        $(".send_notification").prop('disabled', false);
-                                    }
-                                });
-                            }, delayInMilliseconds);
+
+                                location.reload();
+                            }else{
+                                alertify.error('Socket config not found, notification might not have been sent!');
+                            }
+
+
                         }
                     }
                 });
