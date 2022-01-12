@@ -17,6 +17,9 @@
         .text-right {
             text-align: center !important;
         }
+        .home-icon{
+            margin: auto;
+        }
 
         .text-left {
             text-align: center !important;
@@ -54,18 +57,18 @@
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="<?= base_url() ?>home" style="color: black;">LOBBY</a></li>
         </ul>
-        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a href="<?= base_url() ?>sessions/prework" style="color: black;">PREWORK</a></li>
-        </ul>
-        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a href="<?= base_url() ?>sessions" style="color: black;">SESSIONS</a></li>
-        </ul>
-        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a href="<?= base_url() ?>sessions/event_extras" style="color: black;">EVENT EXTRAS</a></li>
-        </ul>
-        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a href="<?= base_url() ?>front_assets/agility/2021_Commercial_Kickoff-Participant_Workbook.pdf" target="_blank" style="color: black;">RESOURCES</a></li>
-        </ul>
+<!--        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">-->
+<!--            <li><a href="--><?//= base_url() ?><!--sessions/prework" style="color: black;">PREWORK</a></li>-->
+<!--        </ul>-->
+<!--        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">-->
+<!--            <li><a href="--><?//= base_url() ?><!--sessions" style="color: black;">SESSIONS</a></li>-->
+<!--        </ul>-->
+<!--        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">-->
+<!--            <li><a href="--><?//= base_url() ?><!--sessions/event_extras" style="color: black;">EVENT EXTRAS</a></li>-->
+<!--        </ul>-->
+<!--        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">-->
+<!--            <li><a href="--><?//= base_url() ?><!--front_assets/agility/2021_Commercial_Kickoff-Participant_Workbook.pdf" target="_blank" style="color: black;">MEETING RESOURCES</a></li>-->
+<!--        </ul>-->
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="<?= base_url() ?>front_assets/agility/2021+Commercial+Kickoff+Agenda+and+Session+Overview-compressed.pdf" target="_blank" style="color: black;">AGENDA</a></li>
         </ul>
@@ -147,57 +150,57 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="location.href='<?= base_url() ?>sessions/prework'">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="location.href='<?= base_url() ?>sessions'">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions'">
                     <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">AGENDA</div>
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="location.href='<?= base_url() ?>sessions/event_extras'">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/event_extras'">
                     <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
                     <div class="icon-text">ACTIVITIES</div>
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="showEventPhotosVideo('517591955');">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">
                     <i class="fas fa-camera-retro home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">MEETING</div>
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="showEventPhotosVideo('520352760');">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">
                     <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">ON-DEMAND SESSIONS</div>
                 </div>
             </div>
 
-            <div class="col-md-2 text-center">
-                <div class="home-icon" onclick="showEventPhotosVideo('520352760');">
+            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">
                     <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">NON-PROFIT PARTNERSHIP</div>
                 </div>
             </div>
 
-            <div class="col-md-6 text-center" style="margin: auto">
-                <div style="float:right" class="home-icon" onclick="showEventPhotosVideo('520352760');">
+            <div class=" col-lg-3 col-md-6 col-sm-6 text-center mt-2" style="margin: auto">
+                <div class="home-icon m-sm-auto float-lg-none float-md-right " onclick="showEventPhotosVideo('520352760');">
                     <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">MATERIALS</div>
                 </div>
             </div>
 
-            <div class="col-md-6 text-center">
-                <div class="home-icon" onclick="window.open('/support')">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
+                <div class="home-icon m-sm-auto float-lg-none float-md-left " onclick="window.open('/support')">
                     <i class="fas fa-cog home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>
                 </div>
