@@ -306,22 +306,6 @@
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>front_assets/agility/2021_Commercial_Kickoff-Participant_Workbook.pdf" target="_blank">RESOURCES</a></li>
-                                    </ul>
-
-                                    <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>sessions/event_extras">EVENT EXTRAS</a></li>
-                                    </ul>
-
-                                    <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>sessions">SESSIONS</a></li>
-                                    </ul>
-
-                                    <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>sessions/prework">PREWORK</a></li>
-                                    </ul>
-
-                                    <ul class="main-menu nav navbar-nav navbar-right">
                                         <li><a href="<?= base_url() ?>home">LOBBY</a></li>
                                     </ul>
 
