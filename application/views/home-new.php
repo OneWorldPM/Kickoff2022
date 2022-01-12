@@ -149,59 +149,71 @@
         </style>
 
         <div class="row text-center" style="margin-top: 5%">
-
+<!--
             <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
-            </div>
+            </div>-->
 
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions'">
-                    <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="">
+                    <i class="fas fa-calendar-check home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">AGENDA</div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/event_extras'">
-                    <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="">
+                    <i class="fas fa-tshirt home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">ATTIRE</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="">
+                    <i class="fas fa-plane home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">TRANSPORTATION REMINDERS</div>
+                </div>
+            </div>
+<!---->
+     <!--       <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>//sessions/event_extras'">
+                   <img src="<?/*=base_url()*/?>front_assets/agility/heart_in_hand.png" width="62px">
                     <div class="icon-text">ACTIVITIES</div>
                 </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">
-                    <i class="fas fa-camera-retro home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">MEETING</div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">
-                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">ON-DEMAND SESSIONS</div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">
-                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">NON-PROFIT PARTNERSHIP</div>
-                </div>
-            </div>
-
-            <div class=" col-lg-3 col-md-6 col-sm-6 text-center mt-2" style="margin: auto">
-                <div class="home-icon m-sm-auto float-lg-none float-md-right " onclick="showEventPhotosVideo('520352760');">
-                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">MATERIALS</div>
-                </div>
-            </div>
+            </div>-->
+<!---->
+<!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
+<!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
+<!--                    <i class="fas fa-camera-retro home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">MEETING</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
+<!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">-->
+<!--                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">ON-DEMAND SESSIONS</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
+<!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('520352760');">-->
+<!--                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">NON-PROFIT PARTNERSHIP</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class=" col-lg-3 col-md-6 col-sm-6 text-center mt-2" style="margin: auto">-->
+<!--                <div class="home-icon m-sm-auto float-lg-none float-md-right " onclick="showEventPhotosVideo('520352760');">-->
+<!--                    <i class="fas fa-trophy home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">MATERIALS</div>-->
+<!--                </div>-->
+<!--            </div>-->
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
-                <div class="home-icon m-sm-auto float-lg-none float-md-left " onclick="window.open('/support')">
-                    <i class="fas fa-cog home-menu-icon home-icon-fa"></i>
+                <div class="home-icon m-sm-auto float-lg-none "">
+                    <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>
                 </div>
             </div>
