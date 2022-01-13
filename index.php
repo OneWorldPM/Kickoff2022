@@ -36,6 +36,25 @@
  * @filesource
  */
 
+
+define('ow_config', dirname(__FILE__).'/config.php');
+
+try {
+    if (! @include_once(ow_config)) // @ - to suppress warnings
+        throw new Exception;
+    else
+        require_once(ow_config);
+}
+catch(Exception $e) {
+
+    $no_config_message = '
+	<p style="text-align: center;"><strong>Please add config.php file at the root</strong></p>
+	';
+    echo $no_config_message;
+    die();
+}
+
+
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
