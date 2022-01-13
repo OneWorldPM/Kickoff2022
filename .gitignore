@@ -4,3 +4,4 @@
 /assets/images/
 .htaccess
 socket_config.php
+config.php

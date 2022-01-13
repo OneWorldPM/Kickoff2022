@@ -76,10 +76,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn' => '',
-    'hostname' => 'localhost',
-    'username' => 'Kickoff2022',
-    'password' => 'kickoff2022#',
-    'database' => 'Kickoff2022',
+    'hostname' => ow_db_hostname,
+    'username' => ow_db_username,
+    'password' => ow_db_password,
+    'database' => ow_db_database,
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
     'pconnect' => FALSE,
