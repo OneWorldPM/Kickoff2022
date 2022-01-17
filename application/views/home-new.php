@@ -10,6 +10,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?=base_url()?>front_assets/login_template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>front_assets/font-awesome-modified/css/all.css" rel="stylesheet" type="text/css">
+    <script src="<?=base_url()?>front_assets/font-awesome-modified/js/pro.js"></script>
 </head>
 
 <style>
@@ -192,7 +194,7 @@
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-tablet-alt home-menu-icon home-icon-fa"></i>
+                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SESSIONS</div>
                 </div>
             </div>
@@ -264,7 +266,9 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
 <script src="<?=base_url()?>front_assets/login_template/vendor/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-<script src="https://kit.fontawesome.com/fd91b3535c.js" crossorigin="anonymous"></script>
+<!--<script src="https://kit.fontawesome.com/fd91b3535c.js" crossorigin="anonymous"></script>-->
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha512-v8ng/uGxkge3d1IJuEo6dJP8JViyvms0cly9pnbfRxT6/31c3dRWxIiwGnMSWwZjHKOuY3EVmijs7k1jz/9bLA==" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
