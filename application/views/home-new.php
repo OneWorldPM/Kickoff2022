@@ -152,12 +152,12 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
+       <!--     <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
-            </div>
+            </div>-->
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
                 <div class="home-icon m-sm-auto" id="agendaBtn">
@@ -177,17 +177,17 @@
                     <div class="icon-text">TRAVEL AND TRANSPORTATION</div>
                 </div>
             </div>
-
+<!--
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="">
                     <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">TRAINING</div>
                 </div>
-            </div>
+            </div>-->
 <!---->
-            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="/*location.href='<?= base_url() ?>//sessions/event_extras'*/">
-                   <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+ <!--           <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="/*location.href='<?/*= base_url() */?>//sessions/event_extras'*/">
+                   <img src="<?/*=base_url()*/?>front_assets/agility/heart_in_hand.png" width="62px">
                     <div class="icon-text">Extras</div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                     <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SESSIONS</div>
                 </div>
-            </div>
+            </div>-->
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
