@@ -72,7 +72,7 @@
 <!--            <li><a href="--><?//= base_url() ?><!--front_assets/agility/2021_Commercial_Kickoff-Participant_Workbook.pdf" target="_blank" style="color: black;">MEETING RESOURCES</a></li>-->
 <!--        </ul>-->
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a href="<?= base_url() ?>front_assets/agility/2021+Commercial+Kickoff+Agenda+and+Session+Overview-compressed.pdf" target="_blank" style="color: black;">AGENDA</a></li>
+            <li><a href="#" id="header_agenda" style="color: black">AGENDA</a></li>
         </ul>
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="https://yourconference.live/support/submit_ticket" target="_blank" style="color: black;">SUPPORT</a></li>
