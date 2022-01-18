@@ -486,7 +486,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="welcomeModalLabel">Welcome to our 2021 Commercial Kickoff!</h5>
+                    <h5 class="modal-title" id="welcomeModalLabel">Welcome to our 2022 Commercial Kickoff!</h5>
                 </div>
                 <div class="modal-body">
                     <p>Our 2022 Commercial Kickoff brings an opportunity to reconnect with one another in person and reignite our belief that every interaction has the power to change a life.
