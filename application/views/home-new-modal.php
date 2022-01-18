@@ -118,7 +118,7 @@
                 Thursday: Awards Dinner, Ceremony and Celebration at the Hilton Anaheim (indoor event)<br>
                 Attire: Semi-formal; suit and tie for men, and equivalent for ladies
                 <br><br>
-                February weather in California averages between 60&deg & 75&deg Fahrenheit. Expect cooler temps in the evening. For up-to-the-minute weather detail, <a href="https://www.accuweather.com/en/us/anaheim/92805/weather-forecast/327150" target="_blank">click here</a>.
+                February weather in California averages between 60&deg and 75&deg Fahrenheit. Expect cooler temps in the evening. For up-to-the-minute weather detail, <a href="https://www.accuweather.com/en/us/anaheim/92805/weather-forecast/327150" target="_blank">click here</a>.
                 <br><br>
                 If you have questions about any planned Kickoff events, please contact <a href="https://kickoff@agilitihealth.com">kickoff@agilitihealth.com</a>.
 
