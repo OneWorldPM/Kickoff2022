@@ -33,6 +33,7 @@ class Home extends CI_Controller {
         );
 
         $this->load->view('home-new', $data);
+        $this->load->view('home-new-modal');
     }
 
     function getLobbyVideoDetails()
@@ -131,6 +132,7 @@ class Home extends CI_Controller {
 
         return;
     }
+
 
 
 }

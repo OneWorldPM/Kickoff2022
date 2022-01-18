@@ -159,22 +159,22 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
+                <div class="home-icon m-sm-auto" id="agendaBtn">
                     <i class="fas fa-calendar-check home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">AGENDA</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
+                <div class="home-icon m-sm-auto" id="activityBtn">
                     <i class="fas fa-tshirt home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">ATTIRE</div>
+                    <div class="icon-text">ACTIVITIES AND ATTIRE</div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
+                <div class="home-icon m-sm-auto" id="travelBtn">
                     <i class="fas fa-plane home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">TRANSPORTATION REMINDERS</div>
+                    <div class="icon-text">TRAVEL AND TRANSPORTATION</div>
                 </div>
             </div>
 
@@ -275,7 +275,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
-
+<script src="<?=base_url()?>front_assets/js/home-new.js"></script>
 </body>
 
 <script>
@@ -489,13 +489,19 @@
                     <h5 class="modal-title" id="welcomeModalLabel">Welcome to our 2021 Commercial Kickoff!</h5>
                 </div>
                 <div class="modal-body">
-                    <p>Welcome to our 2021 Commercial Kickoff! We’re excited to gather (virtually) as a team for three days of education, inspiration, and celebration.</p>
+                    <p>Our 2022 Commercial Kickoff brings an opportunity to reconnect with one another in person and reignite our belief that every interaction has the power to change a life.
+                        Together we will explore the power in our work as we reconnect with the story of Agiliti, our strategy and opportunities, and our daily choices that impact our teams, results, and potential.
+                        We'll spend time preparing for a new year with engaging sessions, team building, and opportunities to celebrate with one another as we welcome both new and tenured team members together.</p>
 
-                    <p>This week, you’ll work with your teams to develop revenue and account plans that you’ll activate throughout the year. We’re excited to bring you best-in-class virtual training and workshops in partnership with Brevet, one of the leading Sales Enablement Training and Consulting Firms. All sessions are designed to ensure you will emerge from our time together with real-world, actionable account strategies and plays for your territories.</p>
+                    <p>You will leave Anaheim prepared to power into 2022 with the skills and insight to connect our full value to solve customer issues, elevate our positioning, and challenge customers to
+                        think differently about Agiliti.</p>
 
                     <p>In addition to training, join us throughout the week for live general sessions hosted by Agiliti leaders, and special events including a live Awards Celebration to welcome our top performers and 2021 Legends into the President’s Circle plus our announcement of next year’s exclusive trip destination.</p>
 
-                    <p>This site is your central hub for our 2021 Kickoff events. Take a look around, mark your calendars and join us here Feb. 23-25 for our live and on-demand events.</p>
+                    <p>This portal is your one-stop source for information about this year’s meeting. Check back often for updates.</p>
+
+                    <p> <strong>Questions?</strong>  <br> Contact <a href="https://kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary close-welcome-msg" style="cursor: pointer;">Mark as read <i class="welcome-msg-saving-spinner fas fa-circle-notch fa-spin" style="display: none;"></i><i class="fas fa-check welcome-msg-saving-done" style="color: #0afd0a; display: none;"></i></button>
