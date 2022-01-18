@@ -15,9 +15,8 @@
                 Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):
                 <br><br>
                 <b style="color: #fd7e14">Tuesday, February 22</b><br>
-                9:00 AM – 12:00 PM<br>
-                12:00 PM – 5:00 PM	Leadership Registration<br>
-                Leadership Lunch/Meeting<br>
+                9:00 AM – 12:00 PM 	Leadership Registration<br>
+                12:00 PM – 5:00 PM  Leadership Lunch/Meeting<br>
                 2:00 PM – 5:00 PM	General Attendee Registration<br>
                 6:00 PM – 8:30 PM	Welcome Reception and Product/Solution Showcase<br><br>
                 <b style="color: #fd7e14">Wednesday, February 23</b><br>
