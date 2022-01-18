@@ -174,7 +174,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="travelBtn">
                     <i class="fas fa-plane home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">TRAVEL & TRANSPORTATION</div>
+                    <div class="icon-text">TRAVEL & HOTEL</div>
                 </div>
             </div>
 <!--
