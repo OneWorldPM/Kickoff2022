@@ -167,7 +167,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="activityBtn">
-                    <i class="fas fa-tshirt home-menu-icon home-icon-fa"></i>
+                    <img src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
                     <div class="icon-text">ACTIVITIES AND ATTIRE</div>
                 </div>
             </div>
