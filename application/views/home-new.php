@@ -500,7 +500,7 @@
 
                     <p>This portal is your one-stop source for information about this year’s meeting. Check back often for updates.</p>
 
-                    <p> <strong>Questions?</strong>  <br> Contact <a href="https://kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
+                    <p> <strong>Questions?</strong>  <br> Contact <a href="mailto:kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
                     </p>
                 </div>
                 <div class="modal-footer">
