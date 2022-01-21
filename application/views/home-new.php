@@ -103,8 +103,12 @@
 
 <div class="container">
 
-    <div class="row" style="margin-top: 5%">
+    <div class="row" style="margin-top: 1%">
         <div class="col-md-12 text-center">
+            <div class="text-neon">
+             <p style="color: white; font-size: 20px">  2022 Commercial Kickoff starts in: </p>
+            <p  style="color: white; font-size: 40px" id="countdown-timer"></p>
+            </div><br>
             <img class="" src="<?= base_url() ?>front_assets/agility/agility_neon_banner.png" style="width: 100%;">
         </div>
     </div>
@@ -126,7 +130,7 @@
     <?php if(!isset($_GET['testing_v2'])):?>
         <style>
             .home-icon{
-                box-shadow: -10px 10px 50px  #0e90d2;
+                box-shadow: -10px 10px 50px  #FF7C27;
                 border-radius: 100px;
                 padding: 10px;
                 margin-bottom: 10px;
@@ -147,6 +151,31 @@
             .home-icon-fa{
                 font-size: 60px
                 !important; color: #01426a;
+            }
+
+            .text-neon{
+                color: white;
+                text-shadow: 0 0 20px #fff, 0 0 20px orangered, 0 0 20px orangered, 0 0 20px orangered, 0 0 20px orangered;
+            }
+            .text-neon-blue {
+                color: white;
+                text-shadow: 0 0 20px #fff, 0 0 20px deepskyblue, 0 0 20px deepskyblue, 0 0 20px deepskyblue, 0 0 20px deepskyblue;
+                text-decoration: underline deepskyblue;
+            }
+            .bg-brick{
+                background-image: url("<?=base_url()?>front_assets/agility/Agility_login_background.png");
+                color: white;
+                border-radius: 10px;
+            }
+
+            .bg-blur {
+                backdrop-filter: blur(1px);
+            }
+
+            .border-white {
+                box-shadow: inset 0 0 10px 10px white;
+                padding: 10px;
+                border-radius: 10px  ;
             }
         </style>
 
@@ -483,12 +512,12 @@
 
     <!-- Welcome Modal -->
     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="welcomeModalLabel">Welcome to our 2022 Commercial Kickoff!</h5>
+        <div class="modal-dialog modal-lg border-white" role="document">
+            <div class="modal-content bg-brick">
+                <div class="modal-header bg-blur">
+                    <h5 class="modal-title text-neon" id="welcomeModalLabel">Countdown to our 2022 Commercial Kickoff!</h5>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body bg-blur">
                     <p>Our 2022 Commercial Kickoff brings an opportunity to reconnect with one another in person and reignite our belief that every interaction has the power to change a life.
                         Together we will explore the power in our work as we reconnect with the story of Agiliti, our strategy and opportunities, and our daily choices that impact our teams, results, and potential.
                         We'll spend time preparing for a new year with engaging sessions, team building, and opportunities to celebrate with one another as we welcome both new and tenured team members together.</p>
@@ -498,12 +527,10 @@
 
                     <p>In addition to training, join us throughout the week for live general sessions hosted by Agiliti leaders, and special events including a live Awards Celebration to welcome our top performers and 2021 Legends into the President’s Circle plus our announcement of next year’s exclusive trip destination.</p>
 
-                    <p>This portal is your one-stop source for information about this year’s meeting. Check back often for updates.</p>
-
-                    <p> <strong>Questions?</strong>  <br> Contact <a href="mailto:kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
+                    <p> <strong>Questions?</strong>  <br> Contact <a class="text-neon-blue" href="mailto:kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
                     </p>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer bg-blur">
                     <button type="button" class="btn btn-primary close-welcome-msg" style="cursor: pointer;">Mark as read <i class="welcome-msg-saving-spinner fas fa-circle-notch fa-spin" style="display: none;"></i><i class="fas fa-check welcome-msg-saving-done" style="color: #0afd0a; display: none;"></i></button>
                 </div>
             </div>
