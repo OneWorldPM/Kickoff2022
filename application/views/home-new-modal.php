@@ -16,28 +16,28 @@
                 Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):
                 <br><br>
                 <b style="color: #fd7e14">Tuesday, February 22</b><br>
-                12:00 PM – 5:00 PM  Leadership Lunch/Meeting<br>
-                2:00 PM – 5:00 PM	General Attendee Registration<br>
-                6:00 PM – 8:30 PM	Welcome Reception and Product/Solution Showcase<br><br>
+                12 – 5 p.m.	Leadership Lunch/Meeting<br>
+                2 – 5 p.m.	General Attendee Registration<br>
+                6 – 8:30 p.m.	Welcome Reception and Product/Solution Showcase<br><br>
                 <b style="color: #fd7e14">Wednesday, February 23</b><br>
-                7:00 AM – 8:00 AM	Breakfast<br>
-                8:00 AM – 10:00 AM	Opening General Session<br>
-                10:00 AM–12:00 PM	Training Sessions<br>
-                12:00 PM – 1:00 PM	Lunch<br>
-                1:00 PM – 4:00 PM	Training Sessions<br>
-                3:00 PM – 5:30 PM	Product/Solution Showcase: Interactive Solution Experience<br>
-                5:30 PM – 6:00 PM	Free Time<br>
-                6:00 PM – 9:00 PM	All Team Offsite Dinner<br><br>
+                7 – 8 a.m.	Breakfast<br>
+                8 - 10 a.m.	Opening General Session<br>
+                10 a.m. – 12 p.m.	Training Sessions<br>
+                12 – 1 p.m.	Lunch<br>
+                1 – 4 p.m.	Training Sessions<br>
+                3 – 5:30 p.m.	Product/Solution Showcase: Interactive Solution Experience<br>
+                5:30 – 6 p.m.	Free Time<br>
+                6 – 9 p.m.	All Team Offsite Dinner<br><br>
                 <b style="color: #fd7e14">Thursday, February 24</b><br>
-                7:00 AM – 8:00 AM	Breakfast<br>
-                8:00 AM – 10:00 AM	Training Session Day Two Kickoff<br>
-                10:00 AM–12:00 PM	Training Sessions<br>
-                12:00 PM – 1:00 PM	Lunch<br>
-                1:00 PM – 3:00 PM	Training Sessions<br>
-                3:00 PM – 4:30 PM	Divisional Meetings<br>
-                4:30 PM – 5:45 PM	Closing General Session<br>
-                5:45 PM – 7:00 PM	Free Time<br>
-                7:00 PM – 12:00 AM	Awards Dinner, Ceremony and Celebration<br><br>
+                7 – 8 a.m.	Breakfast<br>
+                8 - 10 a.m.	Training Session Day Two Kickoff<br>
+                10 a.m. – 12 p.m.	Training Sessions <br>
+                12 – 1 p.m.	Lunch<br>
+                1 – 3 p.m.	Training Sessions<br>
+                3 – 4:30 p.m.	Divisional Meetings<br>
+                4:30 – 5:45 p.m.	Closing General Session<br>
+                5:45 – 7 p.m.	Free Time<br>
+                7 p.m. – 12 a.m.	Awards Dinner, Ceremony and Celebration<br><br>
                 <b style="color: #fd7e14">Friday, February 25</b><br>
                 All morning	Departures<br>
 
@@ -113,6 +113,7 @@
                 Attire: Casual
                 <br><br>
                 Wednesday: Offsite dinner (indoor)<br>
+                Attire: Casual
                 <br><br>
                 Thursday: Awards Dinner, Ceremony and Celebration at the Hilton Anaheim (indoor event)<br>
                 Attire: Semi-formal; suit and tie for men, and equivalent for ladies
