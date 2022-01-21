@@ -112,7 +112,7 @@
                 Tuesday: Welcome Reception at the Hilton Anaheim (indoor event)<br>
                 Attire: Casual
                 <br><br>
-                Wednesday: Offsite dinner (indoor)<br>
+                Wednesday: Offsite dinner (indoor event)<br>
                 Attire: Casual
                 <br><br>
                 Thursday: Awards Dinner, Ceremony and Celebration at the Hilton Anaheim (indoor event)<br>
