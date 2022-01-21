@@ -165,6 +165,7 @@
             .bg-brick{
                 background-image: url("<?=base_url()?>front_assets/agility/Agility_login_background.png");
                 color: white;
+                border-radius: 10px;
             }
 
             .bg-blur {
@@ -174,6 +175,7 @@
             .border-white {
                 box-shadow: inset 0 0 10px 10px white;
                 padding: 10px;
+                border-radius: 10px  ;
             }
         </style>
 
