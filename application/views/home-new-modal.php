@@ -1,6 +1,6 @@
 <!-- Modal -->
-<div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModal" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+<div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModal" aria-hidden="true" >
+    <div class="modal-dialog modal-lg border-white" >
         <div class="modal-content bg-brick">
             <div class="modal-header bg-blur">
                 <h5 class="modal-title text-neon" id="agendaModal" >AGENDA</h5>
@@ -51,7 +51,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="travelModal" tabindex="-1" aria-labelledby="travelModalLavel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg border-white">
         <div class="modal-content bg-brick">
             <div class="modal-header bg-blur">
                 <h5 class="modal-title text-neon" id="travelModalLabel">TRAVEL & HOTEL</h5>
@@ -97,7 +97,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="activityModal" tabindex="-1" aria-labelledby="activityModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg border-white">
         <div class="modal-content bg-brick">
             <div class="modal-header bg-blur">
                 <h5 class="modal-title text-neon" id="activityModalLabel">ACTIVITIES AND ATTIRE</h5>
