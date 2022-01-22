@@ -177,6 +177,9 @@
                 padding: 10px;
                 border-radius: 10px  ;
             }
+            .tb-title{
+                line-height: 50px;
+            }
         </style>
 
         <div class="row text-center" style="margin-top: 5%">

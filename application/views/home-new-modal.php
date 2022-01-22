@@ -15,32 +15,104 @@
                 <strong> AGENDA </strong><br>
                 Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):
                 <br><br>
-                <b style="color: #fd7e14">Tuesday, February 22</b><br>
-                12 – 5 p.m.	Leadership Lunch/Meeting<br>
-                2 – 5 p.m.	General Attendee Registration<br>
-                6 – 8:30 p.m.	Welcome Reception and Product/Solution Showcase<br><br>
-                <b style="color: #fd7e14">Wednesday, February 23</b><br>
-                7 – 8 a.m.	Breakfast<br>
-                8 - 10 a.m.	Opening General Session<br>
-                10 a.m. – 12 p.m.	Training Sessions<br>
-                12 – 1 p.m.	Lunch<br>
-                1 – 4 p.m.	Training Sessions<br>
-                3 – 5:30 p.m.	Product/Solution Showcase: Interactive Solution Experience<br>
-                5:30 – 6 p.m.	Free Time<br>
-                6 – 9 p.m.	All Team Offsite Dinner<br><br>
-                <b style="color: #fd7e14">Thursday, February 24</b><br>
-                7 – 8 a.m.	Breakfast<br>
-                8 - 10 a.m.	Training Session Day Two Kickoff<br>
-                10 a.m. – 12 p.m.	Training Sessions <br>
-                12 – 1 p.m.	Lunch<br>
-                1 – 3 p.m.	Training Sessions<br>
-                3 – 4:30 p.m.	Divisional Meetings<br>
-                4:30 – 5:45 p.m.	Closing General Session<br>
-                5:45 – 7 p.m.	Free Time<br>
-                7 p.m. – 12 a.m.	Awards Dinner, Ceremony and Celebration<br><br>
-                <b style="color: #fd7e14">Friday, February 25</b><br>
-                All morning	Departures<br>
+                <table>
+                    <tr class="tb-title">
+                    <td colspan="2"><b style="color: #fd7e14">Tuesday, February 22</b></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 20px">12:00 p.m. – 5:00 p.m.</td>
+                        <td >Leadership Lunch/Meeting</td>
+                    </tr>
+                    <tr>
+                        <td>2:00 p.m. – 5:00 p.m.</td>
+                        <td>General Attendee Registration</td>
+                    </tr>
+                    <tr>
+                        <td>6:00 p.m. – 8:30 p.m.</td>
+                        <td>Welcome Reception and Product/Solution Showcase</td>
+                    </tr>
+                    <tr class="tb-title">
+                        <td><b style="color: #fd7e14">Wednesday, February 23</b></td>
+                    </tr>
+                    <tr>
+                        <td>7:00 a.m. – 8:00 a.m.</td>
+                        <td>Breakfast</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 a.m. – 10:00 a.m.</td>
+                        <td>Opening General Session</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 a.m. – 12:00 p.m.</td>
+                        <td>Training Sessions</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 p.m. – 1:00 p.m.</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 p.m. – 4:00 p.m.</td>
+                        <td>Training Sessions</td>
+                    </tr>
+                    <tr>
+                        <td>3:00 p.m. – 5:30 p.m.</td>
+                        <td>Product/Solution Showcase: Interactive Solution Experience</td>
+                    </tr>
+                    <tr>
+                        <td>5:30 p.m.  – 6:00 p.m.</td>
+                        <td>Free Time</td>
+                    </tr>
+                    <tr>
+                        <td>6:00 p.m. – 9:00 p.m.</td>
+                        <td>All Team Offsite Dinner</td>
+                    </tr>
+                    <tr class="tb-title">
+                        <td><b style="color: #fd7e14">Thursday, February 24</b><br></td>
+                    </tr>
+                    <tr>
+                        <td>7:00 a.m. – 8:00 a.m.</td>
+                        <td>Breakfast</td>
+                    </tr>
+                    <tr>
+                        <td>8:00 a.m. – 10:00 a.m.</td>
+                        <td>Training Session Day Two Kickoff</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 a.m. – 12:00 p.m.</td>
+                        <td>Training Sessions</td>
+                    </tr>
+                    <tr>
+                        <td>12:00 p.m. – 1:00 p.m.</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 p.m. – 3:00 p.m.</td>
+                        <td>Training Sessions</td>
+                    </tr>
+                    <tr>
+                        <td>3:00 p.m. – 4:30 p.m.</td>
+                        <td>Divisional Meetings</td>
+                    </tr>
+                    <tr>
+                        <td>4:30 p.m. – 5:45 p.m.</td>
+                        <td>Closing General Session</td>
+                    </tr>
+                    <tr>
+                        <td>5:45 p.m.  – 7:00 p.m.</td>
+                        <td>Free Time </td>
+                    </tr>
+                    <tr>
+                        <td>7:00 p.m. – 12:00 a.m.</td>
+                        <td>Awards Dinner, Ceremony and Celebration </td>
+                    </tr>
+                    <tr class="tb-title">
+                        <td><b style="color: #fd7e14">Friday, February 25</b></td>
+                    </tr>
+                    <tr>
+                        <td>All morning	Departures</td>
+                    </tr>
 
+                </table>
             </div>
             <div class="modal-footer bg-blur">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
