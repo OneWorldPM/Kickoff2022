@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Faux SKO 21</title>
+    <title>Agility | 2021 Commercial Kickoff</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="<?= base_url() ?>front_assets/images/FAUXSKO21/fauxsko_icon_transparent.png"/>
+    <link rel="icon" type="image/png" href="<?= base_url() ?>front_assets/agility/agiliti-favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>front_assets/login_template/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -55,10 +55,10 @@
 <body>
 
 <div class="limiter">
-    <div class="container-login100" style="background-image: url(<?=base_url()?>front_assets/images/mohammed-shaheen-Fo44off83V8-unsplash.jpg)">
+    <div class="container-login100" style="background-image: url(<?=base_url()?>/front_assets/agility/Agility_login_background.png)">
         <div class="wrap-login100">
-            <div class="login100-form-title"">
-            <img src="<?=base_url()?>front_assets/images/FAUXSKO21/SKO_2021_WebHero_1920w.png" style="width: 100%;height: auto;">
+            <div class="login100-form-title pt-2 pb-2" style="background: #ececec;position: unset;">
+            <img src="<?=base_url()?>front_assets/agility/Agiliti_logo_transparent.png" style="width: 50%;height: auto;">
         </div>
 
         <form id="reset-pass-from" class="login100-form validate-form">
