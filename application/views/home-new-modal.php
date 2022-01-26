@@ -20,12 +20,12 @@
                     <td colspan="2"><b style="color: #fd7e14">Tuesday, February 22</b></td>
                     </tr>
                     <tr>
-                        <td style="padding-right: 20px">12:00 p.m. – 5:00 p.m.</td>
-                        <td >Leadership Lunch/Meeting</td>
+                        <td style="padding-right: 20px">9:00 a.m. – 12:00 p.m.</td>
+                        <td >Leadership Registration</td>
                     </tr>
                     <tr>
-                        <td>2:00 p.m. – 5:00 p.m.</td>
-                        <td>General Attendee Registration</td>
+                        <td>12:00 p.m. – 5:00 p.m.</td>
+                        <td>Leadership Lunch & Meeting // General Attendee Registration</td>
                     </tr>
 
                     <tr>
@@ -45,7 +45,7 @@
                         <td>Opening General Session</td>
                     </tr>
                     <tr>
-                        <td>10:00 a.m. – 12:00 p.m.</td>
+                        <td>9:00 a.m. – 12:00 p.m.</td>
                         <td>Training Sessions</td>
                     </tr>
                     <tr>
@@ -57,11 +57,11 @@
                         <td>Training Sessions</td>
                     </tr>
                     <tr>
-                        <td>3:00 p.m. – 5:30 p.m.</td>
+                        <td>3:00 p.m. – 5:00 p.m.</td>
                         <td>Product/Solution Showcase: Interactive Solution Experience</td>
                     </tr>
                     <tr>
-                        <td>5:30 p.m.  – 6:00 p.m.</td>
+                        <td>5:00 p.m.  – 6:30 p.m.</td>
                         <td>Free Time</td>
                     </tr>
                     <tr>
@@ -76,35 +76,35 @@
                         <td>Breakfast</td>
                     </tr>
                     <tr>
-                        <td>8:00 a.m. – 10:00 a.m.</td>
-                        <td>Training Session Day Two Kickoff</td>
+                        <td>8:00 a.m. – 8:45 a.m.</td>
+                        <td>Day Two Kickoff</td>
                     </tr>
                     <tr>
-                        <td>10:00 a.m. – 12:00 p.m.</td>
+                        <td>8:45 a.m. – 12:30 p.m.</td>
                         <td>Training Sessions</td>
                     </tr>
                     <tr>
-                        <td>12:00 p.m. – 1:00 p.m.</td>
+                        <td>12:30 p.m. – 1:30 p.m.</td>
                         <td>Lunch</td>
                     </tr>
                     <tr>
-                        <td>1:00 p.m. – 3:00 p.m.</td>
+                        <td>1:30 p.m. – 3:00 p.m.</td>
                         <td>Training Sessions</td>
                     </tr>
                     <tr>
-                        <td>3:00 p.m. – 4:30 p.m.</td>
+                        <td>3:15 p.m. – 4:15 p.m.</td>
                         <td>Divisional Meetings</td>
                     </tr>
                     <tr>
-                        <td>4:30 p.m. – 5:45 p.m.</td>
+                        <td>4:30 p.m. – 5:00 p.m.</td>
                         <td>Closing General Session</td>
                     </tr>
                     <tr>
-                        <td>5:45 p.m.  – 7:00 p.m.</td>
+                        <td>5:00 p.m.  – 6:30 p.m.</td>
                         <td>Free Time </td>
                     </tr>
                     <tr>
-                        <td>7:00 p.m. – 12:00 a.m.</td>
+                        <td>6:30 p.m. – 12:00 a.m.</td>
                         <td>Awards Dinner, Ceremony and Celebration </td>
                     </tr>
                     <tr class="tb-title">
