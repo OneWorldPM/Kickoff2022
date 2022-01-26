@@ -63,7 +63,7 @@
                         <td>Free Time</td>
                     </tr>
                     <tr>
-                        <td>6:00 p.m. – 9:00 p.m.</td>
+                        <td>6:30 p.m. – 9:30 p.m.</td>
                         <td>All Team Offsite Dinner</td>
                     </tr>
                     <tr class="tb-title">
