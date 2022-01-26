@@ -260,7 +260,7 @@
 <!--            </div>-->
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
-                <div class="home-icon m-sm-auto float-lg-none "">
+                <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>
                 </div>
@@ -528,8 +528,7 @@
                     <p>You will leave Anaheim prepared to power into 2022 with the skills and insight to connect our full value to solve customer issues, elevate our positioning, and challenge customers to
                         think differently about Agiliti.</p>
 
-                    <p>In addition to training, join us throughout the week for live general sessions hosted by Agiliti leaders, and special events including a live Awards Celebration to welcome our top performers and 2021 Legends into the President’s Circle plus our announcement of next year’s exclusive trip destination.</p>
-
+                    <p>We look forward to this important time together!</p>
                     <p> <strong>Questions?</strong>  <br> Contact <a class="text-neon-blue" href="mailto:kickofff@agilitihealth.com">kickofff@agilitihealth.com</a> with inquiries about the event.
                     </p>
                 </div>
