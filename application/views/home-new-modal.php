@@ -27,10 +27,7 @@
                         <td>2:00 p.m. – 5:00 p.m.</td>
                         <td>General Attendee Registration</td>
                     </tr>
-                    <tr>
-                        <td>6:00 p.m. – 8:30 p.m.</td>
-                        <td>Welcome Reception and Product/Solution Showcase</td>
-                    </tr>
+
                     <tr class="tb-title">
                         <td><b style="color: #fd7e14">Wednesday, February 23</b></td>
                     </tr>
@@ -132,12 +129,12 @@
                 </button>
             </div>
             <div class="modal-body bg-blur">
-                This year’s hotel accommodations are based at the <a target="_blank" href="https://www3.hilton.com/en/hotels/california/hilton-anaheim-SNAAHHH/index.html?SEO_id=GMB-HI-SNAAHHH&y_source=1_MTIyMDk1OS03MTUtbG9jYXRpb24uZ29vZ2xlX3dlYnNpdGVfb3ZlcnJpZGU%3D">Hilton Anaheim</a>. Training sessions and several social events will take place inside the hotel.
+                This year’s hotel accommodations are based at the <a class="text-neon-blue" target="_blank" href="https://www3.hilton.com/en/hotels/california/hilton-anaheim-SNAAHHH/index.html?SEO_id=GMB-HI-SNAAHHH&y_source=1_MTIyMDk1OS03MTUtbG9jYXRpb24uZ29vZ2xlX3dlYnNpdGVfb3ZlcnJpZGU%3D">Hilton Anaheim</a>. Training sessions and several social events will take place inside the hotel.
                 <br><br>
                 Hotel reservations will be centrally managed by Todd Gabello, and a room will be held in your name once you complete your registration. Your confirmation number will be emailed to you no later than the week of February 14.
                 <br><br>
                 <b>ARRIVALS</b><br>
-                All attendees will arrive on Tuesday, February 22. Please refer to the January 17 email from <a class="text-neon-blue" href="mailto:kickoff@agilitihealth.com">kickoff@agilitihealth.com</a> for details on what time you need to be at the hotel by on Tuesday.
+                All attendees will arrive on Tuesday, February 22. Please refer to the January 17 email from kickoff@agilitihealth.com for details on what time you need to be at the hotel by on Tuesday.
                 <br><br>
                 <b>DEPARTURES</b><br>
                 All attendees will depart on Friday, February 25. You may book your departure flight as early as you would like that morning from John Wayne Airport (SNA).
