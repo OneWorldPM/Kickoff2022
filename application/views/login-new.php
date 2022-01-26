@@ -472,7 +472,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button id="pass-rec-email-btn" type="button" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
+                <button id="pass-rec-email-btn" type="button" class="btn" style="background-color: #FD7E14; color: white"><i class="fas fa-paper-plane"></i> Send</button>
             </div>
         </div>
     </div>
