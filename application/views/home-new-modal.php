@@ -41,7 +41,7 @@
                         <td>Breakfast</td>
                     </tr>
                     <tr>
-                        <td>8:00 a.m. – 10:00 a.m.</td>
+                        <td>8:00 a.m. – 9:00 a.m.</td>
                         <td>Opening General Session</td>
                     </tr>
                     <tr>
