@@ -28,6 +28,11 @@
                         <td>General Attendee Registration</td>
                     </tr>
 
+                    <tr>
+                        <td>6:00 p.m. – 9:00 p.m.</td>
+                        <td>Welcome Reception</td>
+                    </tr>
+
                     <tr class="tb-title">
                         <td><b style="color: #fd7e14">Wednesday, February 23</b></td>
                     </tr>
