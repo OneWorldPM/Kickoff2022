@@ -16,7 +16,12 @@ class Homepage_setting extends CI_Controller {
     public function index(){
 
         $agenda = $this->home_model->getAgenda();
-        $data['agenda'] = $agenda[0]->agenda;
+        if($agenda){
+            $data['agenda'] = $agenda[0]->agenda;
+        }else{
+            $data['agenda']='';
+        }
+
         $this->load->view('admin/header');
         $this->load->view('admin/homepage_setting', $data);
         $this->load->view('admin/footer');
