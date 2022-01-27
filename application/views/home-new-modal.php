@@ -9,112 +9,113 @@
                 </button>
             </div>
             <div class="modal-body bg-blur">
-                <p><b>REGISTRATION </b></p>
-                Registration will be open from 9 a.m. to 5 p.m. on Tuesday, February 22. Upon arrival at the Hilton, check-in at the front desk then head to the 2022 Commercial Kickoff registration desk on the second floor of the hotel to pick up your name badge. The Welcome Reception begins at 6 p.m.
-                <br><br>
-                <strong> AGENDA </strong><br>
-                Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):
-                <br><br>
-                <table>
-                    <tr class="tb-title">
-                    <td colspan="2"><b style="color: #fd7e14">Tuesday, February 22</b></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right: 20px">9:00 a.m. – 12:00 p.m.</td>
-                        <td >Leadership Registration</td>
-                    </tr>
-                    <tr>
-                        <td>12:00 p.m. – 5:00 p.m.</td>
-                        <td>Leadership Lunch & Meeting // General Attendee Registration</td>
-                    </tr>
-
-                    <tr>
-                        <td>6:00 p.m. – 9:00 p.m.</td>
-                        <td>Welcome Reception</td>
-                    </tr>
-
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Wednesday, February 23</b></td>
-                    </tr>
-                    <tr>
-                        <td>7:00 a.m. – 8:00 a.m.</td>
-                        <td>Breakfast</td>
-                    </tr>
-                    <tr>
-                        <td>8:00 a.m. – 9:00 a.m.</td>
-                        <td>Opening General Session</td>
-                    </tr>
-                    <tr>
-                        <td>9:00 a.m. – 12:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>12:00 p.m. – 1:00 p.m.</td>
-                        <td>Lunch</td>
-                    </tr>
-                    <tr>
-                        <td>1:00 p.m. – 4:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>3:00 p.m. – 5:00 p.m.</td>
-                        <td>Product/Solution Showcase: Interactive Solution Experience</td>
-                    </tr>
-                    <tr>
-                        <td>5:00 p.m.  – 6:30 p.m.</td>
-                        <td>Free Time</td>
-                    </tr>
-                    <tr>
-                        <td>6:30 p.m. – 9:30 p.m.</td>
-                        <td>All Team Offsite Dinner</td>
-                    </tr>
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Thursday, February 24</b><br></td>
-                    </tr>
-                    <tr>
-                        <td>7:00 a.m. – 8:00 a.m.</td>
-                        <td>Breakfast</td>
-                    </tr>
-                    <tr>
-                        <td>8:00 a.m. – 8:45 a.m.</td>
-                        <td>Day Two Kickoff</td>
-                    </tr>
-                    <tr>
-                        <td>8:45 a.m. – 12:30 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>12:30 p.m. – 1:30 p.m.</td>
-                        <td>Lunch</td>
-                    </tr>
-                    <tr>
-                        <td>1:30 p.m. – 3:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>3:15 p.m. – 4:15 p.m.</td>
-                        <td>Divisional Meetings</td>
-                    </tr>
-                    <tr>
-                        <td>4:30 p.m. – 5:00 p.m.</td>
-                        <td>Closing General Session</td>
-                    </tr>
-                    <tr>
-                        <td>5:00 p.m.  – 6:30 p.m.</td>
-                        <td>Free Time </td>
-                    </tr>
-                    <tr>
-                        <td>6:30 p.m. – 12:00 a.m.</td>
-                        <td>Awards Dinner, Ceremony and Celebration </td>
-                    </tr>
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Friday, February 25</b></td>
-                    </tr>
-                    <tr>
-                        <td>All morning	Departures</td>
-                    </tr>
-
-                </table>
+                <div id="agendaText"></div>
+<!--                <p><b>REGISTRATION </b></p>-->
+<!--                Registration will be open from 9 a.m. to 5 p.m. on Tuesday, February 22. Upon arrival at the Hilton, check-in at the front desk then head to the 2022 Commercial Kickoff registration desk on the second floor of the hotel to pick up your name badge. The Welcome Reception begins at 6 p.m.-->
+<!--                <br><br>-->
+<!--                <strong> AGENDA </strong><br>-->
+<!--                Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):-->
+<!--                <br><br>-->
+<!--                <table>-->
+<!--                    <tr class="tb-title">-->
+<!--                    <td colspan="2"><b style="color: #fd7e14">Tuesday, February 22</b></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td style="padding-right: 20px">9:00 a.m. – 12:00 p.m.</td>-->
+<!--                        <td >Leadership Registration</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>12:00 p.m. – 5:00 p.m.</td>-->
+<!--                        <td>Leadership Lunch & Meeting // General Attendee Registration</td>-->
+<!--                    </tr>-->
+<!---->
+<!--                    <tr>-->
+<!--                        <td>6:00 p.m. – 9:00 p.m.</td>-->
+<!--                        <td>Welcome Reception</td>-->
+<!--                    </tr>-->
+<!---->
+<!--                    <tr class="tb-title">-->
+<!--                        <td><b style="color: #fd7e14">Wednesday, February 23</b></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>7:00 a.m. – 8:00 a.m.</td>-->
+<!--                        <td>Breakfast</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>8:00 a.m. – 9:00 a.m.</td>-->
+<!--                        <td>Opening General Session</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>9:00 a.m. – 12:00 p.m.</td>-->
+<!--                        <td>Training Sessions</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>12:00 p.m. – 1:00 p.m.</td>-->
+<!--                        <td>Lunch</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>1:00 p.m. – 4:00 p.m.</td>-->
+<!--                        <td>Training Sessions</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>3:00 p.m. – 5:00 p.m.</td>-->
+<!--                        <td>Product/Solution Showcase: Interactive Solution Experience</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>5:00 p.m.  – 6:30 p.m.</td>-->
+<!--                        <td>Free Time</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>6:30 p.m. – 9:30 p.m.</td>-->
+<!--                        <td>All Team Offsite Dinner</td>-->
+<!--                    </tr>-->
+<!--                    <tr class="tb-title">-->
+<!--                        <td><b style="color: #fd7e14">Thursday, February 24</b><br></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>7:00 a.m. – 8:00 a.m.</td>-->
+<!--                        <td>Breakfast</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>8:00 a.m. – 8:45 a.m.</td>-->
+<!--                        <td>Day Two Kickoff</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>8:45 a.m. – 12:30 p.m.</td>-->
+<!--                        <td>Training Sessions</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>12:30 p.m. – 1:30 p.m.</td>-->
+<!--                        <td>Lunch</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>1:30 p.m. – 3:00 p.m.</td>-->
+<!--                        <td>Training Sessions</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>3:15 p.m. – 4:15 p.m.</td>-->
+<!--                        <td>Divisional Meetings</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>4:30 p.m. – 5:00 p.m.</td>-->
+<!--                        <td>Closing General Session</td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>5:00 p.m.  – 6:30 p.m.</td>-->
+<!--                        <td>Free Time </td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>6:30 p.m. – 12:00 a.m.</td>-->
+<!--                        <td>Awards Dinner, Ceremony and Celebration </td>-->
+<!--                    </tr>-->
+<!--                    <tr class="tb-title">-->
+<!--                        <td><b style="color: #fd7e14">Friday, February 25</b></td>-->
+<!--                    </tr>-->
+<!--                    <tr>-->
+<!--                        <td>All morning	Departures</td>-->
+<!--                    </tr>-->
+<!---->
+<!--                </table>-->
             </div>
             <div class="modal-footer bg-blur">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

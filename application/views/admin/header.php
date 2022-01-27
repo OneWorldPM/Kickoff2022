@@ -353,7 +353,21 @@ $user_name = ucfirst($this->session->userdata('uname'));
                                     </a>
                                 </li>
                             <?php } ?>
-							
+
+                            <?php if ($user_role == 'super_admin') { ?>
+                                <li class="<?= ($uri_segment == 'homepage_setting') ? 'active' : ''; ?>" >
+                                    <a href="<?= site_url() ?>admin/homepage_setting" id="dash">
+                                        <div class="item-content">
+                                            <div class="item-media">
+                                                <i class="fa fa-vimeo-square" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <span class="title">Homepage Setting </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </nav>
                 </div>
