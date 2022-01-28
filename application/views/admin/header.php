@@ -359,7 +359,7 @@ $user_name = ucfirst($this->session->userdata('uname'));
                                     <a href="<?= site_url() ?>admin/homepage_setting" id="dash">
                                         <div class="item-content">
                                             <div class="item-media">
-                                                <i class="fa fa-vimeo-square" aria-hidden="true"></i>
+                                                <i class="fa fa-tasks" aria-hidden="true"></i>
                                             </div>
                                             <div class="item-inner">
                                                 <span class="title">Homepage Setting </span>
