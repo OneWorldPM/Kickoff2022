@@ -204,3 +204,19 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var page_link = $(location).attr('href');
+        var user_id = <?= $this->session->userdata("cid") ?>;
+        var page_name = "User Dashboard";
+        $.ajax({
+            url: "<?= base_url() ?>home/add_user_activity",
+            type: "post",
+            data: {'user_id': user_id, 'page_name': page_name, 'page_link': page_link},
+            dataType: "json",
+            success: function (data) {
+            }
+        });
+    });
+</script>
