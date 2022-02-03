@@ -353,7 +353,37 @@ $user_name = ucfirst($this->session->userdata('uname'));
                                     </a>
                                 </li>
                             <?php } ?>
-							
+
+                            <?php if ($user_role == 'super_admin') { ?>
+                                <li class="<?= ($uri_segment == 'homepage_setting') ? 'active' : ''; ?>" >
+                                    <a href="<?= site_url() ?>admin/homepage_setting" id="dash">
+                                        <div class="item-content">
+                                            <div class="item-media">
+                                                <i class="fa fa-tasks" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <span class="title">Homepage Setting </span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php } ?>
+
+                            <?php if ($user_role == 'super_admin') { ?>
+                                <li class="<?= ($uri_segment == 'analytics') ? 'active' : ''; ?>" >
+                                    <a href="<?= site_url() ?>admin/analytics" id="dash">
+                                        <div class="item-content">
+                                            <div class="item-media">
+                                                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <span class="title">Analytics</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            <?php } ?>
+
                         </ul>
                     </nav>
                 </div>
