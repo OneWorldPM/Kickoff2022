@@ -367,9 +367,12 @@
                 <span class="focus-input100"></span>
             </div>
 
-            <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+            <div class="wrap-input100 validate-input m-b-18 input-group" data-validate = "Password is required">
                 <span class="label-input100">Password</span>
                 <input class="input100" type="password" id="password" name="password" placeholder="Enter password">
+                <div class="input-group-append">
+                   <button class="btn " style="padding: 12px; background-color: #F0943E" id="showPasswordBtn"><i class="fa fa-eye" aria-hidden="true" style="cursor: pointer" id="passwordEye"></i></button>
+                </div>
                 <span class="focus-input100"></span>
             </div>
 
@@ -478,6 +481,22 @@ switch ($msg) {
             '<?= $t ?>'
         )<?=($t=='success')?'.then(()=>{window.location.replace("'.base_url().'login")})':''?>;
         <?php endif; ?>
+
+
+        $('#showPasswordBtn').on('click', function(e){
+            e.preventDefault();
+            if($('#password').attr('type') == 'password'){
+                $('#password').attr('type', 'text');
+                $('#passwordEye').removeClass('fa-eye')
+                $('#passwordEye').addClass('fa-eye-slash')
+
+            }else{
+                $('#password').attr('type', 'password');
+                $('#passwordEye').removeClass('fa-eye-slash')
+                $('#passwordEye').addClass('fa-eye')
+            }
+
+        })
     });
 
     var myInput = document.getElementById("password");
