@@ -184,12 +184,12 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-       <!--     <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>sessions/prework'">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
-            </div>-->
+            </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
                 <div class="home-icon m-sm-auto" id="agendaBtn">
@@ -209,18 +209,18 @@
                     <div class="icon-text">TRAVEL & HOTEL</div>
                 </div>
             </div>
-<!--
+
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="">
                     <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">TRAINING</div>
                 </div>
-            </div>-->
+            </div>
 <!---->
- <!--           <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="/*location.href='<?/*= base_url() */?>//sessions/event_extras'*/">
-                   <img src="<?/*=base_url()*/?>front_assets/agility/heart_in_hand.png" width="62px">
-                    <div class="icon-text">Extras</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="/*location.href='<?= base_url() ?>//sessions/event_extras'*/">
+                   <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+                    <div class="icon-text">CHARITABLE <br> GIVING INFO</div>
                 </div>
             </div>
 
@@ -229,7 +229,7 @@
                     <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SESSIONS</div>
                 </div>
-            </div>-->
+            </div>
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
@@ -266,26 +266,14 @@
                 </div>
             </div>
 
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
+                <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
+                    <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">PHOTO BOOTH</div>
+                </div>
+            </div>
         </div>
     <?php endif; ?>
-
-<!--    <div class="row text-center">-->
-<!---->
-<!--        <div class="col-md-6 text-right">-->
-<!--            <div class="text-center" style="border: 1px solid white;border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;">-->
-<!--                <i class="fas fa-info-circle" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">INFORMATION</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="col-md-12">-->
-<!--            <div class="text-center" style="border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;" onclick="location.href='/support'">-->
-<!--                <i class="fas fa-cog" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">SUPPORT</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
 
 </div> <!-- /container -->
 
