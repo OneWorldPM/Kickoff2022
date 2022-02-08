@@ -267,7 +267,7 @@
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
-                <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
+                <div class="home-icon m-sm-auto float-lg-none " onclick="">
                     <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PHOTO BOOTH</div>
                 </div>
