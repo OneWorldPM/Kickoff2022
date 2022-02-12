@@ -145,7 +145,7 @@ if (isset($_GET['testing']))
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", (strtotime($val->time_slot) + 60*60))?> - <?=date("h:i A", strtotime($val->end_time) + 60*60) ?> ET</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", (strtotime($val->time_slot) + 60*180))?> - <?=date("h:i A", strtotime($val->end_time) + 60*180) ?> EST</span>
                                                         <?php
                                                         if ($val->us_emea_switch == 1)
                                                         { ?>
