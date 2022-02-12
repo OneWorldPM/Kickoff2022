@@ -199,7 +199,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="activityBtn">
-                    <img src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
+                    <img class="activities_attire" src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
                     <div class="icon-text">ACTIVITIES & ATTIRE</div>
                 </div>
             </div>
@@ -219,7 +219,7 @@
 <!---->
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
-                   <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+                   <img class="heart_in_hand" src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
                     <div class="icon-text">EVENT EXTRAS</div>
                 </div>
             </div>
@@ -671,5 +671,24 @@
         }
 
     </script>
+
+<!-- ######## STYLE SCRIPT #########-->
+<script>
+    $(function(){
+        $('.activities_attire').hover(function(){
+             $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/activities_attire_hover.png");
+        })
+        $('.activities_attire').mouseleave(function(){
+            $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/Agility_activities.png");
+        })
+
+        $('.heart_in_hand').hover(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand_hover.png");
+        })
+        $('.heart_in_hand').mouseleave(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand.png");
+        })
+    })
+</script>
 
 </html>
