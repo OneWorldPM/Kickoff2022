@@ -210,17 +210,17 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+         <!--   <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="">
                     <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">TRAINING</div>
                 </div>
-            </div>
+            </div>-->
 <!---->
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="/*location.href='<?= base_url() ?>//sessions/event_extras'*/">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
                    <img src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
-                    <div class="icon-text">CHARITABLE <br> GIVING INFO</div>
+                    <div class="icon-text">EVENT EXTRAS</div>
                 </div>
             </div>
 
@@ -266,12 +266,12 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
-                <div class="home-icon m-sm-auto float-lg-none " onclick="">
-                    <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">PHOTO BOOTH</div>
-                </div>
-            </div>
+<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >-->
+<!--                <div class="home-icon m-sm-auto float-lg-none " onclick="">-->
+<!--                    <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">PHOTO BOOTH</div>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
     <?php endif; ?>
 
