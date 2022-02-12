@@ -100,6 +100,53 @@
     </div>
 </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="health_safety_modal" tabindex="-1" aria-labelledby="health_safety_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg border-white">
+        <div class="modal-content bg-brick">
+            <div class="modal-header bg-blur">
+                <h5 class="modal-title text-neon" id="health_safety_label">HEALTH AND SAFETY</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-blur">
+                <p>As a company, we’ve taken many steps over the last two years to ensure the safety and health of our employees during COVID-19—and our approach to planning for the upcoming 2022 Commercial Kickoff has been no different. </p>
+                <p>As you prepare to travel to the event, know that we are closely monitoring the spread and severity of COVID-19 in Anaheim and around the country. </p>
+                <ul>
+                    <li><strong>
+                        We are requiring that all attendees show proof of a negative COVID-19 PCR test taken before your
+                        inbound travel to Anaheim for the meeting. If you are arriving in Anaheim on Sunday, Feb. 20 or Monday,
+                        Feb. 21—you need to test no sooner than Thursday, Feb. 17. If you are arriving in Anaheim on Tuesday, Feb.
+                        22 or Wednesday, Feb. 23—you need to test no sooner than Friday, Feb. 18.</strong>
+                    </li>
+                    <br>
+                    <li>
+                        Agiliti will not cover the cost of last-minute testing so please plan ahead. We recommend securing the first
+                        available appointment on the day you are going in for your test.
+                    </li>
+                    <br>
+                    <li>
+                        Once you have your test results, forward them to <a class="text-neon-blue" href="mailto:Jenny.Westberg@agilitihealth.com">Jenny.Westberg@agilitihealth.com</a>.
+                    </li>
+                </ul>
+                <p>
+                    With the official lifting of CA state masking mandates, onsite masking and testing will be left to individual choice. We will provide mechanisms to enable those choices (by providing optional
+                    masks and a testing location). Beyond that, the company will not enforce masking or testing requirements onsite during the meeting.
+                </p>
+                <p>
+                    Thank you for your continued understanding and patience as we respond to COVID-19.
+                </p>
+            </div>
+            <div class="modal-footer bg-blur">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script type="text/javascript">
     $(document).ready(function () {
         var page_link = $(location).attr('href');

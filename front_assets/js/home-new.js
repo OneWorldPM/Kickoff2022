@@ -15,6 +15,9 @@ $(function(){
         $('#activityModal').modal('show');
     })
 
+    $('#health_safety').on('click', function(){
+        $('#health_safety_modal').modal('show');
+    })
 
     countdown_timer();
     get_agenda();

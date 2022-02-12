@@ -259,6 +259,14 @@
 <!--                </div>-->
 <!--            </div>-->
 
+
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
+                <div class="home-icon m-sm-auto float-lg-none" id="health_safety">
+                    <i class="fas fa-notes-medical home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">HEALTH & SAFETY</div>
+                </div>
+            </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
@@ -272,6 +280,7 @@
 <!--                    <div class="icon-text">PHOTO BOOTH</div>-->
 <!--                </div>-->
 <!--            </div>-->
+
         </div>
     <?php endif; ?>
 
