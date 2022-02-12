@@ -210,12 +210,7 @@
                 </div>
             </div>
 
-         <!--   <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">TRAINING</div>
-                </div>
-            </div>-->
+
 <!---->
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
@@ -224,12 +219,18 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">SESSIONS</div>
-                </div>
-            </div>
+<!--               <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
+<!--               <div class="home-icon m-sm-auto" onclick="">-->
+<!--                   <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>-->
+<!--                   <div class="icon-text">TRAINING</div>-->
+<!--               </div>-->
+<!--           </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
+<!--                <div class="home-icon m-sm-auto" onclick="">-->
+<!--                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">SESSIONS</div>-->
+<!--                </div>-->
+<!--            </div>-->
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
