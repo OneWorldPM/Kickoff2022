@@ -10,7 +10,7 @@ if (isset($_GET['testing']))
 
 <style>
     body{
-        background-image: url(<?=base_url()?>front_assets/agility/Agility_main_page_backdrop.png);
+        background-image: url(<?=base_url()?>front_assets/agility/Agility_login_background.png);
         background-attachment: fixed;
         background-size: cover !important;
         background-position: center center !important;
@@ -165,28 +165,28 @@ if (isset($_GET['testing']))
 
                                             <div class="post-title">
                                                 <h6 style="font-weight: 600">
-                                                    <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> CT</span>
+                                                 <!--   <span style="color: #b97a43;"><?/*= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))*/?> - <?/*=date("h:i A", strtotime($val->end_time)) */?> CT</span>
                                                     <?php
-                                                    if ($val->us_emea_switch == 1)
-                                                    { ?>
-                                                        <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> CT</span>
+/*                                                    if ($val->us_emea_switch == 1)
+                                                    { */?>
+                                                        <span style="color: #b97a43;">US/EMEA <?/*= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))*/?> <?/*=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) */?> CT</span>
                                                         <?php
-                                                    }
+/*                                                    }
 
 
                                                     if ($val->us_emea_switch == 1 && $val->apj_switch == 1)
-                                                    { ?>
+                                                    { */?>
                                                         /
                                                         <?php
-                                                    }
+/*                                                    }
 
 
                                                     if ($val->apj_switch == 1)
-                                                    { ?>
-                                                        <span style="color: #358080;">APJ <?= $val->sessions_date_display_apj . ' ' . date("h:i A", strtotime($val->start_time_display_apj))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_apj)) ?> AEDT</span>
-                                                        <?php
-                                                    }
-                                                    ?>
+                                                    { */?>
+                                                        <span style="color: #358080;">APJ <?/*= $val->sessions_date_display_apj . ' ' . date("h:i A", strtotime($val->start_time_display_apj))*/?> <?/*=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_apj)) */?> AEDT</span>
+                                                        --><?php
+/*                                                    }
+                                                    */?>
                                                 </h6>
                                                 <?php
                                                 if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
@@ -216,8 +216,14 @@ if (isset($_GET['testing']))
                                                 <?= $val->sessions_description ?>
                                             </div>
                                         </div>
+                                        <?php if($val->sessions_id == 15):?>
+                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="#" target="_blank"><span>Donate Now</span></a>
+                                        <?php elseif ($val->sessions_id == 16): ?>
+                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="#" target="_blank"><span>Service Now</span></a>
+                                        <?php else: ?>
+                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="#"><span>View</span></a>
+                                        <?php endif; ?>
 
-                                        <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="#"><span>View</span></a>
 
                                     </div>
                                     <?php
