@@ -6,6 +6,7 @@ if (isset($_GET['testing']))
 //    echo "</pre>";
 //    exit;
 }
+$time_zone = "EST";
 ?>
 <style>
     body{
@@ -107,7 +108,12 @@ if (isset($_GET['testing']))
                                         <div class="col-md-8">
                                             <h2 style="margin-bottom: 0px;"><?= (isset($sessions) && !empty($sessions)) ? $sessions->session_title : "" ?></h2>
                                             <small><i class="fa fa-calendar" aria-hidden="true"></i>
-                                                <span style="color: #b97a43;"><?= $sessions->sessions_date . ' ' . date("h:i A", strtotime($sessions->time_slot))?> - <?=date("h:i A", strtotime($sessions->end_time)) ?> CT</span>
+                                                <span style="color: #b97a43;">
+                                                    <?php if($time_zone == "EST"):?>
+                                                    <?= $sessions->sessions_date . ' ' . date("h:i A", strtotime($sessions->time_slot) + 60*180)?> - <?=date("h:i A", strtotime($sessions->end_time)+ 60*180) ?> EST</span>
+                                                    <?php else: ?>
+                                                    <?= $sessions->sessions_date . ' ' . date("h:i A", strtotime($sessions->time_slot))?> - <?=date("h:i A", strtotime($sessions->end_time)) ?> CT</span>
+                                                    <?php endif; ?>
                                                 <?php
                                                 if ($sessions->us_emea_switch == 1)
                                                 { ?>
@@ -370,7 +376,7 @@ if (isset($_GET['testing']))
         } else {
             var remainingSeconds_lable = "second";
         }
-        document.getElementById('id_day_time').innerHTML = pad(days) + " " + days_lable + ", " + pad(hours) + " " + hours_lable + ", " + pad(minutes) + " " + minutes_lable + ", " + pad(remainingSeconds) + " " + remainingSeconds_lable;
+        document.getElementById('id_day_time').innerHTML = pad(days) + " " + days_lable + ", " + pad(hours + 3) + " " + hours_lable + ", " + pad(minutes) + " " + minutes_lable + ", " + pad(remainingSeconds) + " " + remainingSeconds_lable;
         if (seconds <= 0) {
 
             if ($('#timer_status').val() == 1)
