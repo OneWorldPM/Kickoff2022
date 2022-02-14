@@ -171,7 +171,7 @@ if (isset($_GET['testing']))
                                                     <?php
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
-                                                        <h3><a href="<?=$val->zoom_redirect_url?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3><a href="<?=$val->zoom_redirect_url?>" target="_blank" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
                                                         <?php
                                                     }else{ ?>
                                                         <h3><a href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
@@ -193,7 +193,7 @@ if (isset($_GET['testing']))
                                                     <?= $val->sessions_description ?>
                                                 </div>
                                             </div>
-                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
+                                            <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
 
                                         </div>
                                         <?php
