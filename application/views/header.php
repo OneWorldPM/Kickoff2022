@@ -356,6 +356,10 @@
                                         <li><a href="https://yourconference.live/support/submit_ticket" target="_blank">SUPPORT</a></li>
                                     </ul>
 
+                                    <ul class="main-menu nav navbar-nav navbar-right" style="">
+                                        <li><a href="<?=base_url()?>prework">PREWORK RESOURCES</a></li>
+                                    </ul>
+
                                     <ul class="main-menu nav navbar-nav navbar-right">
                                         <li><a href="" id="header_agenda">AGENDA</a></li>
                                     </ul>
