@@ -116,15 +116,13 @@
                 <p>As you prepare to travel to the event, know that we are closely monitoring the spread and severity of COVID-19 in Anaheim and around the country. </p>
                 <ul>
                     <li><strong>
-                        We are requiring that all attendees show proof of a negative COVID-19 PCR test taken before your
-                        inbound travel to Anaheim for the meeting. If you are arriving in Anaheim on Sunday, Feb. 20 or Monday,
-                        Feb. 21—you need to test no sooner than Thursday, Feb. 17. If you are arriving in Anaheim on Tuesday, Feb.
-                        22 or Wednesday, Feb. 23—you need to test no sooner than Friday, Feb. 18.</strong>
+                            We are requiring that all attendees show proof of a negative COVID-19 PCR test taken before your inbound travel to Anaheim for the meeting. If you are arriving in Anaheim on Sunday, Feb. 20 or Monday,
+                            Feb. 21—you need to test no sooner than Thursday, Feb. 17. If you are arriving in Anaheim on Tuesday, Feb. 22 or Wednesday, Feb. 23—you need to test no sooner than Friday, Feb. 18. </strong>
                     </li>
                     <br>
                     <li>
-                        Agiliti will not cover the cost of last-minute testing so please plan ahead. We recommend securing the first
-                        available appointment on the day you are going in for your test.
+                        Agiliti will not cover the cost of last-minute testing so please plan ahead.
+                        We recommend securing the first available appointment at CVS or Walgreens, or a similar pharmacy, on the day you are going in for your test.
                     </li>
                     <br>
                     <li>
