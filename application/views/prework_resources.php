@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col-md-12" style="text-align: center">
                     <!-- CONTENT -->
-                    <a href="<?=base_url()?>uploads/prework_resources/01_Business_Review_Simulation_Background_Final.pdf"><button class="btn btn-warning prework-btn">01_Business Review Simulation Background Final </button></a>
+                    <a href="<?=base_url()?>uploads/prework_resources/01_Business_Review_Simulation_Background_Final.pdf" target="_blank"><button class="btn btn-warning prework-btn">01_Business Review Simulation Background Final </button></a>
                     <a href="<?=base_url()?>uploads/prework_resources/02_Business_Review_Simulation_Account_Development_Plan_Final_.xlsx"><button class="btn btn-warning prework-btn">02_Business Review Simulation Account Development Plan Final </button></a>
                     <a href="<?=base_url()?>uploads/prework_resources/03_Business_Review_Supporting_Metric_Slides_Final.pptx"><button class="btn btn-warning prework-btn">03_Business Review Supporting Metric Slides Final  </button></a>
                     <a href="<?=base_url()?>uploads/prework_resources/04_Business Review Simulation Template Final.pptx"><button class="btn btn-warning prework-btn">04_Business Review Simulation Template Final </button></a>
