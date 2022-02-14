@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModal" aria-hidden="true" >
-    <div class="modal-dialog modal-lg border-white" style="max-width: 70%">
+    <div class="modal-dialog modal-lg border-white" style="max-width: 100%">
         <div class="modal-content bg-brick">
             <div class="modal-header bg-blur">
                 <h5 class="modal-title text-neon" id="agendaModal" >AGENDA</h5>
