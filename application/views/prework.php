@@ -171,7 +171,7 @@ if (isset($_GET['testing']))
                                                     <?php
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
-                                                        <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3><a href="<?=$val->zoom_redirect_url?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
                                                         <?php
                                                     }else{ ?>
                                                         <h3><a href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
