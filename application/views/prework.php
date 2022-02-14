@@ -193,16 +193,8 @@ if (isset($_GET['testing']))
                                                     <?= $val->sessions_description ?>
                                                 </div>
                                             </div>
-                                            <?php
-                                            if($val->sessions_date >= date('Y-m-d'))
-                                            { ?>
-                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
-                                            <?php
-                                            }elseif ($val->session_reply == 1){ ?>
-                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
-                                            <?php
-                                            }
-                                            ?>
+                                            <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
+
                                         </div>
                                         <?php
                                     }
