@@ -15,6 +15,10 @@
 </head>
 
 <style>
+    .zoom {
+      overflow: scroll;
+    }
+
     @media (max-width: 750px) {
         .text-right {
             text-align: center !important;
@@ -268,7 +272,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-2" >
+            <div class="col-lg-12 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>
