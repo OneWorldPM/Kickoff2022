@@ -383,6 +383,7 @@ $user_name = ucfirst($this->session->userdata('uname'));
                                     </a>
                                 </li>
                             <?php } ?>
+
                         </ul>
                     </nav>
                 </div>
