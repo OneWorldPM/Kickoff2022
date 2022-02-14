@@ -192,6 +192,11 @@ if (isset($_GET['testing']))
                                                 <div class="post-description">
                                                     <?= $val->sessions_description ?>
                                                 </div>
+                                                <?php if($val->sessions_id == 1): ?>
+                                                <div class="post-description">
+                                                    <a style="color: #0e90d2; " href="<?=base_url()?>prework"><strong style="text-decoration: underline">PREWORK RESOURCES</strong></a>
+                                                </div>
+                                                <?php endif; ?>
                                             </div>
                                             <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
 
