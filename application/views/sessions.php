@@ -223,7 +223,7 @@ if (isset($_GET['testing']))
                                                 <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
                                             <?php
                                             }else{ ?>
-                                                <?php if($val->sessions_id != 7){ ?>
+                                                <?php if(($val->sessions_id != 7 ) && 1 == 2){ ?>
                                                     <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
                                                 <?php }else{ ?>
                                                     <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>

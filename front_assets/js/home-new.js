@@ -15,9 +15,22 @@ $(function(){
         $('#activityModal').modal('show');
     })
 
+    $('#health_safety').on('click', function(){
+        $('#health_safety_modal').modal('show');
+    })
 
     countdown_timer();
+    get_agenda();
 })
+
+function get_agenda(){
+   $.post(base_url+'/admin/homepage_setting/getAgenda',{},
+       function(data){
+
+       // console.log(data[0].agenda);
+           $('#agendaText').html(data[0].agenda);
+   },'json')
+}
 function countdown_timer(){
     // Set the date we're counting down to
     var countDownDate = new Date("Feb 22, 2022 15:37:25").getTime();

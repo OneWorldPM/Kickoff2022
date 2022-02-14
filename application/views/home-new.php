@@ -15,6 +15,10 @@
 </head>
 
 <style>
+    .zoom {
+      overflow: scroll;
+    }
+
     @media (max-width: 750px) {
         .text-right {
             text-align: center !important;
@@ -184,52 +188,53 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-       <!--     <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>sessions/prework'">
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
-            </div>-->
+            </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2" >
                 <div class="home-icon m-sm-auto" id="agendaBtn">
                     <i class="fas fa-calendar-check home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">AGENDA</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="activityBtn">
-                    <img src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
+                    <img class="activities_attire" src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
                     <div class="icon-text">ACTIVITIES & ATTIRE</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="travelBtn">
                     <i class="fas fa-plane home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">TRAVEL & HOTEL</div>
                 </div>
             </div>
-<!--
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">TRAINING</div>
-                </div>
-            </div>-->
+
+
 <!---->
- <!--           <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="/*location.href='<?/*= base_url() */?>//sessions/event_extras'*/">
-                   <img src="<?/*=base_url()*/?>front_assets/agility/heart_in_hand.png" width="62px">
-                    <div class="icon-text">Extras</div>
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
+                   <img class="heart_in_hand" src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+                    <div class="icon-text">EVENT EXTRAS</div>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">SESSIONS</div>
-                </div>
-            </div>-->
+<!--               <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
+<!--               <div class="home-icon m-sm-auto" onclick="">-->
+<!--                   <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>-->
+<!--                   <div class="icon-text">TRAINING</div>-->
+<!--               </div>-->
+<!--           </div>-->
+<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
+<!--                <div class="home-icon m-sm-auto" onclick="">-->
+<!--                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">SESSIONS</div>-->
+<!--                </div>-->
+<!--            </div>-->
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
@@ -259,33 +264,30 @@
 <!--                </div>-->
 <!--            </div>-->
 
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
+
+            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-2" >
+                <div class="home-icon m-sm-auto float-lg-none" id="health_safety">
+                    <i class="fas fa-notes-medical home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">HEALTH & SAFETY</div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>
                 </div>
             </div>
 
+<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >-->
+<!--                <div class="home-icon m-sm-auto float-lg-none " onclick="">-->
+<!--                    <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">PHOTO BOOTH</div>-->
+<!--                </div>-->
+<!--            </div>-->
+
         </div>
     <?php endif; ?>
-
-<!--    <div class="row text-center">-->
-<!---->
-<!--        <div class="col-md-6 text-right">-->
-<!--            <div class="text-center" style="border: 1px solid white;border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;">-->
-<!--                <i class="fas fa-info-circle" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">INFORMATION</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="col-md-12">-->
-<!--            <div class="text-center" style="border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;" onclick="location.href='/support'">-->
-<!--                <i class="fas fa-cog" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">SUPPORT</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
 
 </div> <!-- /container -->
 
@@ -307,7 +309,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
-<script src="<?=base_url()?>front_assets/js/home-new.js"></script>
+<script src="<?=base_url()?>front_assets/js/home-new.js?v=2"></script>
 </body>
 
 <script>
@@ -683,5 +685,24 @@
         }
 
     </script>
+
+<!-- ######## STYLE SCRIPT #########-->
+<script>
+    $(function(){
+        $('.activities_attire').hover(function(){
+             $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/activities_attire_hover.png");
+        })
+        $('.activities_attire').mouseleave(function(){
+            $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/Agility_activities.png");
+        })
+
+        $('.heart_in_hand').hover(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand_hover.png");
+        })
+        $('.heart_in_hand').mouseleave(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand.png");
+        })
+    })
+</script>
 
 </html>

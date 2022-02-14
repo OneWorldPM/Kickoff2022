@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="agendaModal" tabindex="-1" aria-labelledby="agendaModal" aria-hidden="true" >
-    <div class="modal-dialog modal-lg border-white" >
+    <div class="modal-dialog modal-lg border-white" style="max-width: 100%">
         <div class="modal-content bg-brick">
             <div class="modal-header bg-blur">
                 <h5 class="modal-title text-neon" id="agendaModal" >AGENDA</h5>
@@ -9,112 +9,8 @@
                 </button>
             </div>
             <div class="modal-body bg-blur">
-                <p><b>REGISTRATION </b></p>
-                Registration will be open from 9 a.m. to 5 p.m. on Tuesday, February 22. Upon arrival at the Hilton, check-in at the front desk then head to the 2022 Commercial Kickoff registration desk on the second floor of the hotel to pick up your name badge. The Welcome Reception begins at 6 p.m.
-                <br><br>
-                <strong> AGENDA </strong><br>
-                Though a complete day-by-day agenda will be provided at the meeting registration desk, here’s an overview of the week (subject to change):
-                <br><br>
-                <table>
-                    <tr class="tb-title">
-                    <td colspan="2"><b style="color: #fd7e14">Tuesday, February 22</b></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right: 20px">9:00 a.m. – 12:00 p.m.</td>
-                        <td >Leadership Registration</td>
-                    </tr>
-                    <tr>
-                        <td>12:00 p.m. – 5:00 p.m.</td>
-                        <td>Leadership Lunch & Meeting // General Attendee Registration</td>
-                    </tr>
-
-                    <tr>
-                        <td>6:00 p.m. – 9:00 p.m.</td>
-                        <td>Welcome Reception</td>
-                    </tr>
-
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Wednesday, February 23</b></td>
-                    </tr>
-                    <tr>
-                        <td>7:00 a.m. – 8:00 a.m.</td>
-                        <td>Breakfast</td>
-                    </tr>
-                    <tr>
-                        <td>8:00 a.m. – 9:00 a.m.</td>
-                        <td>Opening General Session</td>
-                    </tr>
-                    <tr>
-                        <td>9:00 a.m. – 12:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>12:00 p.m. – 1:00 p.m.</td>
-                        <td>Lunch</td>
-                    </tr>
-                    <tr>
-                        <td>1:00 p.m. – 4:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>3:00 p.m. – 5:00 p.m.</td>
-                        <td>Product/Solution Showcase: Interactive Solution Experience</td>
-                    </tr>
-                    <tr>
-                        <td>5:00 p.m.  – 6:30 p.m.</td>
-                        <td>Free Time</td>
-                    </tr>
-                    <tr>
-                        <td>6:30 p.m. – 9:30 p.m.</td>
-                        <td>All Team Offsite Dinner</td>
-                    </tr>
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Thursday, February 24</b><br></td>
-                    </tr>
-                    <tr>
-                        <td>7:00 a.m. – 8:00 a.m.</td>
-                        <td>Breakfast</td>
-                    </tr>
-                    <tr>
-                        <td>8:00 a.m. – 8:45 a.m.</td>
-                        <td>Day Two Kickoff</td>
-                    </tr>
-                    <tr>
-                        <td>8:45 a.m. – 12:30 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>12:30 p.m. – 1:30 p.m.</td>
-                        <td>Lunch</td>
-                    </tr>
-                    <tr>
-                        <td>1:30 p.m. – 3:00 p.m.</td>
-                        <td>Training Sessions</td>
-                    </tr>
-                    <tr>
-                        <td>3:15 p.m. – 4:15 p.m.</td>
-                        <td>Divisional Meetings</td>
-                    </tr>
-                    <tr>
-                        <td>4:30 p.m. – 5:00 p.m.</td>
-                        <td>Closing General Session</td>
-                    </tr>
-                    <tr>
-                        <td>5:00 p.m.  – 6:30 p.m.</td>
-                        <td>Free Time </td>
-                    </tr>
-                    <tr>
-                        <td>6:30 p.m. – 12:00 a.m.</td>
-                        <td>Awards Dinner, Ceremony and Celebration </td>
-                    </tr>
-                    <tr class="tb-title">
-                        <td><b style="color: #fd7e14">Friday, February 25</b></td>
-                    </tr>
-                    <tr>
-                        <td>All morning	Departures</td>
-                    </tr>
-
-                </table>
+                <div id="agendaText"></div>
+                <img src="<?=base_url()?>front_assets/agility/Agenda_for_portal.jpg" style="width: 100%">
             </div>
             <div class="modal-footer bg-blur">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -203,6 +99,53 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="health_safety_modal" tabindex="-1" aria-labelledby="health_safety_label" aria-hidden="true">
+    <div class="modal-dialog modal-lg border-white">
+        <div class="modal-content bg-brick">
+            <div class="modal-header bg-blur">
+                <h5 class="modal-title text-neon" id="health_safety_label">HEALTH AND SAFETY</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-blur">
+                <p>As a company, we’ve taken many steps over the last two years to ensure the safety and health of our employees during COVID-19—and our approach to planning for the upcoming 2022 Commercial Kickoff has been no different. </p>
+                <p>As you prepare to travel to the event, know that we are closely monitoring the spread and severity of COVID-19 in Anaheim and around the country. </p>
+                <ul>
+                    <li><strong>
+                            We are requiring that all attendees show proof of a negative COVID-19 PCR test taken before your inbound travel to Anaheim for the meeting. If you are arriving in Anaheim on Sunday, Feb. 20 or Monday,
+                            Feb. 21—you need to test no sooner than Thursday, Feb. 17. If you are arriving in Anaheim on Tuesday, Feb. 22 or Wednesday, Feb. 23—you need to test no sooner than Friday, Feb. 18. </strong>
+                    </li>
+                    <br>
+                    <li>
+                        Agiliti will not cover the cost of last-minute testing so please plan ahead.
+                        We recommend securing the first available appointment at CVS or Walgreens, or a similar pharmacy, on the day you are going in for your test.
+                    </li>
+                    <br>
+                    <li>
+                        Once you have your test results, forward them to <a class="text-neon-blue" href="mailto:Jenny.Westberg@agilitihealth.com">Jenny.Westberg@agilitihealth.com</a>.
+                    </li>
+                </ul>
+                <p>
+                    With the official lifting of CA state masking mandates, onsite masking and testing will be left to individual choice. We will provide mechanisms to enable those choices (by providing optional
+                    masks and a testing location). Beyond that, the company will not enforce masking or testing requirements onsite during the meeting.
+                </p>
+                <p>
+                    Thank you for your continued understanding and patience as we respond to COVID-19.
+                </p>
+            </div>
+            <div class="modal-footer bg-blur">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script type="text/javascript">
     $(document).ready(function () {
