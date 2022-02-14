@@ -131,8 +131,8 @@
                     </li>
                 </ul>
                 <p>
-                    With the official lifting of CA state masking mandates, onsite masking and testing will be left to individual choice. We will provide mechanisms to enable those choices (by providing optional
-                    masks and a testing location). Beyond that, the company will not enforce masking or testing requirements onsite during the meeting.
+                    Though California is lifting its indoor mask mandate for vaccinated individuals on February 16, we are encouraging masking at the event when social distancing is not possible and otherwise, team members should mask at their own discretion.
+                    Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout the week. Per CDC guidance, people should test if symptomatic so Agiliti will provide optional onsite COVID-19 testing throughout the week.
                 </p>
                 <p>
                     Thank you for your continued understanding and patience as we respond to COVID-19.
