@@ -101,6 +101,7 @@
 </div>
 
 
+
 <!-- Modal -->
 <div class="modal fade" id="health_safety_modal" tabindex="-1" aria-labelledby="health_safety_label" aria-hidden="true">
     <div class="modal-dialog modal-lg border-white">
@@ -143,6 +144,7 @@
         </div>
     </div>
 </div>
+
 
 
 <script type="text/javascript">
