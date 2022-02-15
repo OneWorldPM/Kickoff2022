@@ -60,4 +60,23 @@ class User extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
+    public function export_registrants_csv(){
+       $registrants =  $this->muser->export_registrants();
+        header("Content-type: application/csv");
+        header("Content-Disposition: attachment; filename=\"test".".csv\"");
+        header("Pragma: no-cache");
+        header("Expires: 0");
+
+            $handle = fopen('php://output', 'w');
+            fputcsv($handle, array("No","First Name","Last Name", "Email"));
+            $cnt=1;
+            foreach ($registrants->result() as $index=>$key) {
+                $narray=array(($index+1),$key->first_name,$key->last_name,$key->email);
+                fputcsv($handle, $narray);
+            }
+            fclose($handle);
+            exit;
+        }
+
+
 }
