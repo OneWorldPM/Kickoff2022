@@ -198,8 +198,11 @@ if (isset($_GET['testing']))
                                                 </div>
                                                 <?php endif; ?>
                                             </div>
-                                            <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
-
+                                            <?php if($val->sessions_id == 1):?>
+                                                <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>View</span></a>
+                                            <?php else: ?>
+                                                <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>Attend</span></a>
+                                            <?php endif; ?>
                                         </div>
                                         <?php
                                     }
