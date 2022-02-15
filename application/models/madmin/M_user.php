@@ -131,4 +131,13 @@ class M_user extends CI_Model {
         }
     }
 
+    function export_registrants(){
+        $registrants = $this->db->select('*')
+            ->get('customer_master');
+
+        if($registrants->num_rows() > 0)
+            return $registrants;
+        else
+            return '';
+    }
 }
