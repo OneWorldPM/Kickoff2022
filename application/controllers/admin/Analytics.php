@@ -15,6 +15,25 @@ class Analytics extends CI_Controller {
       $this->load->view('admin/footer');
   }
 
+  function export_csv_analytics(){
+      $analytics=$this->manalytics->export_analytics();
+
+
+      header("Content-type: application/csv");
+      header("Content-Disposition: attachment; filename=\"analytics".".csv\"");
+      header("Pragma: no-cache");
+      header("Expires: 0");
+
+      $handle = fopen('php://output', 'w');
+      fputcsv($handle, array("No","First Name","Last Name", "Email"));
+      $cnt=1;
+      foreach ($analytics->result() as $index=>$key) {
+          $narray=array(($index+1),$key->first_name,$key->last_name);
+          fputcsv($handle, $narray);
+      }
+      fclose($handle);
+      exit;
+  }
 
 }
 
