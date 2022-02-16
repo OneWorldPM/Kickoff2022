@@ -10,6 +10,7 @@
 <!--        --><?php //print_r($analytics)?>
         <!-- start: FEATURED BOX LINKS -->
         <div class="container-fluid container-fullw bg-white">
+            <a class="btn btn-success" style="margin-bottom: 20px" href="<?=base_url()?>admin/analytics/export_csv_analytics">Export CSV</a>
             <div class="row">
                 <table id="analyticsTable" class="table-bordered" style="width:100%">
                     <thead style="font-size: 15px;">
