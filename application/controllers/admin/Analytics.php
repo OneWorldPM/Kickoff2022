@@ -25,10 +25,10 @@ class Analytics extends CI_Controller {
       header("Expires: 0");
 
       $handle = fopen('php://output', 'w');
-      fputcsv($handle, array("No","First Name","Last Name", "Email"));
+      fputcsv($handle, array("No","First Name","Last Name", "Page Visited", "Date"));
       $cnt=1;
       foreach ($analytics->result() as $index=>$key) {
-          $narray=array(($index+1),$key->first_name,$key->last_name);
+          $narray=array(($index+1),$key->first_name,$key->last_name,$key->page_name,$key->activity_date_time);
           fputcsv($handle, $narray);
       }
       fclose($handle);
