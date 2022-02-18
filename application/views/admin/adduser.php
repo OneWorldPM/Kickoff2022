@@ -112,6 +112,10 @@ switch ($msg) {
         $m = "Something went wrong, please try again!";
         $t = "error";
         break;
+    case "Empty":
+        $m = "Email or Phone cannot be empty";
+        $t = "error";
+        break;
     default:
         $m = 0;
         break;
