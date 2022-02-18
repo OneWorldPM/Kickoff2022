@@ -43,6 +43,8 @@ class User extends CI_Controller {
             header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=A'); //email or phone already Exist
         } else if ($result == "2") {
             header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=E'); //Some Error
+        } else if ($result == "empty") {
+            header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=Empty'); //Some Error
         } else {
             header('location:' . base_url() . 'admin/user/editUser/'.$post['cid'].'?msg=U'); //Register Success
         }

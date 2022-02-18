@@ -191,26 +191,26 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2" >
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
                 <div class="home-icon m-sm-auto" id="agendaBtn">
                     <i class="fas fa-calendar-check home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">AGENDA</div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="activityBtn">
                     <img class="activities_attire" src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
                     <div class="icon-text">ACTIVITIES & ATTIRE</div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="travelBtn">
                     <i class="fas fa-plane home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">TRAVEL & HOTEL</div>
@@ -219,7 +219,7 @@
 
 
 <!---->
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-sm-2">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
                    <img class="heart_in_hand" src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
                     <div class="icon-text">EVENT EXTRAS</div>
@@ -232,12 +232,12 @@
 <!--                   <div class="icon-text">TRAINING</div>-->
 <!--               </div>-->
 <!--           </div>-->
-<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
-<!--                <div class="home-icon m-sm-auto" onclick="">-->
-<!--                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>-->
-<!--                    <div class="icon-text">SESSIONS</div>-->
-<!--                </div>-->
-<!--            </div>-->
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="">
+                    <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">SESSIONS</div>
+                </div>
+            </div>
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
@@ -268,14 +268,14 @@
 <!--            </div>-->
 
 
-            <div class="col-lg-4 col-md-6 col-sm-6 text-center mt-2" >
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none" id="health_safety">
                     <i class="fas fa-notes-medical home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">HEALTH & SAFETY</div>
                 </div>
             </div>
 
-            <div class="col-lg-12 col-md-6 col-sm-6 text-center mt-2" >
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SUPPORT</div>

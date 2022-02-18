@@ -93,6 +93,12 @@ class M_user extends CI_Model {
     }
 
     function updateCustomer($post) {
+
+        if(empty(trim($post['phone'])))
+            return 'empty';
+        if(empty(trim($post['email'])))
+            return 'empty';
+
         $set = array(
             'first_name' => trim($post['first_name']),
             'last_name' => trim($post['last_name']),
@@ -103,6 +109,16 @@ class M_user extends CI_Model {
             'email' => trim($post['email']),
             'status' => 1
         );
+
+        $duplcicate = $this->db->select('*')
+            ->from('customer_master')
+            ->where('cust_id !=', $post['id'])
+            ->where('phone', trim($post['phone']))
+            ->get();
+        if($duplcicate->num_rows() > 0){
+            return 0;
+        }
+
         $this->db->update("customer_master", $set, array('cust_id' => $post['cid']));
 
         if($this->db->affected_rows() > 0)
