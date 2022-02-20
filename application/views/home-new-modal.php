@@ -48,9 +48,9 @@
                 If you have any questions regarding your travel schedule, please contact <a class="text-neon-blue" href="mailto:Todd.Gabello@agilitihealth.com">Todd Gabello</a> .
                 <br><br>
                 <b>GETTING AROUND TOWN</b><br>
-                Transportation to the Hilton Anaheim will be available upon arrival at John Wayne Airport (SNA). Greeters stationed in the baggage claim area with Agiliti signs will direct you to the nearest shuttle.
+                Transportation to the Hilton Anaheim will be available upon arrival at John Wayne Airport (SNA) on Tuesday, Feb. 22 from 10 a.m. to 4:30 p.m. Greeters stationed in the baggage claim area with Agiliti signs will direct you to the nearest shuttle.
                 <br><br>
-                Departure transportation will be available on Friday, February 25 from the Hilton Anaheim to John Wayne Airport (SNA).
+                Departure transportation will be available from 4:30 a.m. to 12 p.m. on Friday, February 25 from the Hilton Anaheim to John Wayne Airport (SNA).
                 <br><br>
                 Rental cars will not be reimbursed. If your arrival/departure date/time falls outside the shuttle schedule, please take an Uber, Lyft or Taxi.
                 <br><br>
@@ -132,7 +132,7 @@
                 </ul>
                 <p>
                     Though California is lifting its indoor mask mandate for vaccinated individuals on February 16, we are encouraging masking at the event when social distancing is not possible and otherwise, team members should mask at their own discretion.
-                    Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout the week. Per CDC guidance, people should test if symptomatic so Agiliti will provide optional onsite COVID-19 testing throughout the week.
+                    Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout the week. Per CDC guidance, people should test onsite if symptomatic so Agiliti will provide optional onsite COVID-19 testing throughout the week. There will be a nurse onsite to support optional testing and work with folks who are symptomatic. Find the nurse in room Huntington A (floor 4) from 8 a.m. to 4 p.m. Tuesday through Thursday.
                 </p>
                 <p>
                     Thank you for your continued understanding and patience as we respond to COVID-19.
