@@ -128,9 +128,9 @@ if (isset($_GET['testing']))
                             }
                         </style>
                         <?php $current_date = $this->uri->segment(3); ?>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-23')?'selected-date-btn':''?>">February 23</button></a>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-24')?'selected-date-btn':''?>">February 24</button></a>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-25"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-25')?'selected-date-btn':''?>">February 25</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-23')?'selected-date-btn':''?>">February 23</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-24')?'selected-date-btn':''?>">February 24</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-25"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-25')?'selected-date-btn':''?>">February 25</button></a>
                     </div>
                 </div> 
             </div>
