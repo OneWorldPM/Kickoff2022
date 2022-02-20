@@ -152,7 +152,7 @@ if (isset($_GET['testing']))
                                                 <?php
                                                 if($val->sessions_date >= date('Y-m-d') && $val->sessions_id != 7)
                                                 { ?>
-                                                    <a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
+                                                    <a href="#"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
                                                     <?php
                                                 }else{ ?>
                                                     <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>
@@ -192,7 +192,7 @@ if (isset($_GET['testing']))
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
                                                         <?php if($val->sessions_id != 7){ ?>
-                                                        <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3><a href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
                                                         <?php }else{ ?>
                                                         <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
                                                         <?php }
@@ -225,8 +225,8 @@ if (isset($_GET['testing']))
                                                 <?php if(($val->sessions_id != 7 ) && 1 == 2){ ?>
                                                     <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
                                                 <?php }else{ ?>
-                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>
-                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;margin-right: 5px;" href="https://interactiveparty.zoom.us/j/84915974657?pwd=NVBGa3huaGhacmVvQW15S3BPN0NtZz09" target="_blank"><span>Bingo Room 1</span></a>
+                                                    <!--<a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>-->
+                                                    <!--<a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;margin-right: 5px;" href="https://interactiveparty.zoom.us/j/84915974657?pwd=NVBGa3huaGhacmVvQW15S3BPN0NtZz09" target="_blank"><span>Bingo Room 1</span></a>-->
                                                 <?php } ?>
                                             <?php
                                             }
