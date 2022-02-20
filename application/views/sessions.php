@@ -130,7 +130,6 @@ if (isset($_GET['testing']))
                         <?php $current_date = $this->uri->segment(3); ?>
                         <a href="<?=base_url()?>sessions/getsessions_data/2022-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-23')?'selected-date-btn':''?>">February 23</button></a>
                         <a href="<?=base_url()?>sessions/getsessions_data/2022-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-24')?'selected-date-btn':''?>">February 24</button></a>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-25"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-25')?'selected-date-btn':''?>">February 25</button></a>
                     </div>
                 </div> 
             </div>
@@ -166,11 +165,11 @@ if (isset($_GET['testing']))
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> CT</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> ET</span>
                                                         <?php
                                                         if ($val->us_emea_switch == 1)
                                                         { ?>
-                                                            <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> CT</span>
+                                                            <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> ET</span>
                                                         <?php
                                                         }
 
