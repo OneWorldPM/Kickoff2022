@@ -233,7 +233,7 @@
 <!--               </div>-->
 <!--           </div>-->
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
+                <div class="home-icon m-sm-auto" onclick="redirectToSessions()">
                     <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SESSIONS</div>
                 </div>
@@ -582,6 +582,25 @@
 <script src="https://player.vimeo.com/api/player.js"></script>
 
     <script>
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
         $(function() {
 
             <?php if($welcome_msg == 'unread'): ?>
@@ -706,6 +725,23 @@
             $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand.png");
         })
     })
+
+
+    function redirectToSessions() {
+        toastr.info('Please wait...');
+
+        let to_date = '2022-02-23';
+        if ('<?=date('Y-m-d')?>' > '2022-02-23')
+        {
+            to_date = '<?=date('Y-m-d')?>';
+        }
+        if ('<?=date('Y-m-d')?>' > '2022-02-25')
+        {
+            to_date = '2022-02-25';
+        }
+
+        window.location = `<?=base_url()?>sessions/getsessions_data/${to_date}`;
+    }
 </script>
 
 </html>
