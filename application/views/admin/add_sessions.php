@@ -580,6 +580,6 @@ $user_role = $this->session->userdata('role');
         selector: '#sessions_description',
         height : "300",
         theme_advanced_font_sizes : "10px,12px,14px,16px,24px",
-        plugins: 'code'
+        plugins: 'code link',
     });
 </script>
