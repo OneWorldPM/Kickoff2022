@@ -215,11 +215,6 @@ if (isset($_GET['testing']))
                                                 <div class="post-description">
                                                     <?= $val->sessions_description ?>
                                                 </div>
-                                                <?php if($val->sessions_id == 9 || $val->sessions_id == 14):?>
-
-                                                    <a id="facilitators-link" href="#" style="color: #f69240; font-weight: 500; font-size: 20px">Facilitators: The Brevit Group </a>
-
-                                                <?php endif; ?>
                                             </div>
                                             <?php
                                             if($val->session_reply == 1)
