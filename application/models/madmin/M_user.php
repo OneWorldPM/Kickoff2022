@@ -110,14 +110,6 @@ class M_user extends CI_Model {
             'status' => 1
         );
 
-        $duplcicate = $this->db->select('*')
-            ->from('customer_master')
-            ->where('cust_id !=', $post['id'])
-            ->where('phone', trim($post['phone']))
-            ->get();
-        if($duplcicate->num_rows() > 0){
-            return 0;
-        }
 
         $this->db->update("customer_master", $set, array('cust_id' => $post['cid']));
 
