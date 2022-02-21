@@ -131,8 +131,10 @@
                     </li>
                 </ul>
                 <p>
-                    Though California is lifting its indoor mask mandate for vaccinated individuals on February 16, we are encouraging masking at the event when social distancing is not possible and otherwise, team members should mask at their own discretion.
-                    Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout the week. Per CDC guidance, people should test onsite if symptomatic so Agiliti will provide optional onsite COVID-19 testing throughout the week. There will be a nurse onsite to support optional testing and work with folks who are symptomatic. Find the nurse in room Huntington A (floor 4) from 8 a.m. to 4 p.m. Tuesday through Thursday.
+                    California lifted its indoor mask mandate for vaccinated individuals on February 16 but we are still encouraging masking at the event when social distancing is not possible and otherwise,
+                    team members should mask at their own discretion.  Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout
+                    the week.  We are providing optional onsite COVID-19 testing throughout the week. If you are symptomatic, visit the health and safety station in Huntington A on floor 4 from 8 a.m. to 4 p.m.
+                    Tuesday through Thursday.
                 </p>
                 <p>
                     Thank you for your continued understanding and patience as we respond to COVID-19.

@@ -165,7 +165,7 @@ if (isset($_GET['testing']))
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> ET</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot)- 60*180)?> - <?=date("h:i A", strtotime($val->end_time) - 60*180) ?> PT</span>
                                                         <?php
                                                         if ($val->us_emea_switch == 1)
                                                         { ?>
@@ -192,12 +192,12 @@ if (isset($_GET['testing']))
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
                                                         <?php if($val->sessions_id != 7){ ?>
-                                                        <h3><a href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php }else{ ?>
-                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php }
                                                     }else{ ?>
-                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php
                                                     }
                                                     ?>
@@ -215,6 +215,11 @@ if (isset($_GET['testing']))
                                                 <div class="post-description">
                                                     <?= $val->sessions_description ?>
                                                 </div>
+                                                <?php if($val->sessions_id == 9 || $val->sessions_id == 14):?>
+
+                                                    <a id="facilitators-link" href="#" style="color: #f69240; font-weight: 500; font-size: 20px">Facilitators: The Brevit Group </a>
+
+                                                <?php endif; ?>
                                             </div>
                                             <?php
                                             if($val->session_reply == 1)
@@ -292,6 +297,30 @@ if (isset($_GET['testing']))
         </div>
     </div>
 </div>
+
+<!-- Facilitators Modal -->
+<div class="modal fade" id="facilitatorsModal" tabindex="-1" aria-labelledby="facilitatorsModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-lg border-white" style="max-width: 100%; width: 100%">
+        <div class="modal-content bg-brick">
+            <div class="modal-header bg-blur">
+                <h5 class="modal-title text-neon" id="facilitatorsModalLabel" >Facilitators: The Brevit Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-blur">
+                <div id="agendaText"></div>
+                <img src="<?=base_url()?>front_assets/agility/Brevit_group.jpg" style="width: 100%">
+            </div>
+            <div class="modal-footer bg-blur">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var base_url = "<?=base_url()?>";
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#social_link_div').addClass('hidden');
@@ -409,4 +438,10 @@ if (isset($_GET['testing']))
             }
         });
     });
+
+    $('#facilitators-link').click(function(e){
+        e.preventDefault();
+        $('#facilitatorsModal').modal('show');
+    })
 </script>
+
