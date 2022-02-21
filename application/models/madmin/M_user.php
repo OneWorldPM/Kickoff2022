@@ -93,11 +93,7 @@ class M_user extends CI_Model {
     }
 
     function updateCustomer($post) {
-
-        if(empty(trim($post['phone'])))
-            return 'empty';
-        if(empty(trim($post['email'])))
-            return 'empty';
+        
 
         $set = array(
             'first_name' => trim($post['first_name']),
