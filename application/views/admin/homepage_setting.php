@@ -12,6 +12,7 @@
                             <fieldset>
                                 <h3 class="box-title">Update Homepage</h3>
                                 <button class="btn btn-success" id="agendaBtn">Agenda</button>
+                                <button class="btn btn-info" id="health-and-safetyBtn">Health & Safety</button>
                             </fieldset>
 
                         </form>
@@ -24,7 +25,7 @@
 
 <!-- end: FEATURED BOX LINKS -->
 
-<!-- Modal -->
+<!-- Agenda Modal -->
 <div class="modal fade" id="agendaSetting" tabindex="-1" aria-labelledby="agendaSettingLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -39,18 +40,39 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" id="saveAgenda">Save changes</button>
+                <button type="button" class="btn btn-success" id="saveHealthAndSafety">Save changes</button>
             </div>
         </div>
     </div>
 </div>
 
+
+<!-- Health and Safety Modal -->
+<div class="modal fade" id="healthandsafetyModal" tabindex="-1" aria-labelledby="healthandsafetyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="healthandsafetyModaltitle">Health & Safety</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <textarea id="health-and-safetyText"><?=(isset($healthandsafety) && !empty ($healthandsafety))?$healthandsafety:''?></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" id="saveHealthAndSafetyBtn">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 <script>
     $(function(){
-        $('#agendaText').summernote({
-            placeholder: 'Hello stand alone ui',
+        $('#agendaText, #health-and-safetyText').summernote({
+            placeholder: 'Text Here!',
             height: 400,
             toolbar: [
                 ['style', ['style']],
@@ -66,6 +88,11 @@
         $('#agendaBtn').on('click', function(e){
             e.preventDefault();
             $('#agendaSetting').modal('show');
+        })
+
+        $('#health-and-safetyBtn').on('click', function(e){
+            e.preventDefault();
+            $('#healthandsafetyModal').modal('show');
         })
 
         $('#saveAgenda').on('click', function(){
@@ -86,6 +113,27 @@
                     $('#agendaSetting').modal('hide');
                 }
             })
+        });
+
+        $('#saveHealthAndSafetyBtn').on('click', function(){
+            var HealthAndSafetyText = $('#health-and-safetyText').val();
+            // console.log(agendaText);
+            $.post('<?=base_url()?>/admin/homepage_setting/saveHealthAndSafety/',
+                {
+                    'HealthAndSafetyText': HealthAndSafetyText
+                }, function(success){
+                    if(success){
+                        $('#healthandsafetyModal').modal('hide');
+                        Swal.fire(
+                            'Success',
+                            'Health&Safety Updated',
+                            'success'
+                        )
+                    }else{
+                        $('#healthandsafetyModal').modal('hide');
+                    }
+                })
+            console.log('test');
         })
 
 

@@ -35,7 +35,7 @@ class Homepage_setting extends CI_Controller {
         }
     }
 
-    public function getAgenda(){
+    public function getModalContents(){
         $result = $this->home_model->getAgenda();
         if(!empty($result)){
             echo json_encode($result);
@@ -43,4 +43,13 @@ class Homepage_setting extends CI_Controller {
             echo json_encode('error');
         }
     }
+
+    public function saveHealthAndSafety(){
+        $healthText = $this->input->post('HealthAndSafetyText');
+        $result = $this->home_model->saveHealthAndSafety($healthText);
+        if(!empty($result)){
+            echo json_encode($result);
+        }
+    }
+
 }

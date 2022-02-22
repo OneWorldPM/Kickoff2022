@@ -113,32 +113,7 @@
                 </button>
             </div>
             <div class="modal-body bg-blur">
-                <p>As a company, we’ve taken many steps over the last two years to ensure the safety and health of our employees during COVID-19—and our approach to planning for the upcoming 2022 Commercial Kickoff has been no different. </p>
-                <p>As you prepare to travel to the event, know that we are closely monitoring the spread and severity of COVID-19 in Anaheim and around the country. </p>
-                <ul>
-                    <li><strong>
-                            We are requiring that all attendees show proof of a negative COVID-19 PCR test taken before your inbound travel to Anaheim for the meeting. If you are arriving in Anaheim on Sunday, Feb. 20 or Monday,
-                            Feb. 21—you need to test no sooner than Thursday, Feb. 17. If you are arriving in Anaheim on Tuesday, Feb. 22 or Wednesday, Feb. 23—you need to test no sooner than Friday, Feb. 18. </strong>
-                    </li>
-                    <br>
-                    <li>
-                        Agiliti will not cover the cost of last-minute testing so please plan ahead.
-                        We recommend securing the first available appointment at CVS or Walgreens, or a similar pharmacy, on the day you are going in for your test.
-                    </li>
-                    <br>
-                    <li>
-                        Once you have your test results, forward them to <a class="text-neon-blue" href="mailto:Jenny.Westberg@agilitihealth.com">Jenny.Westberg@agilitihealth.com</a>.
-                    </li>
-                </ul>
-                <p>
-                    California lifted its indoor mask mandate for vaccinated individuals on February 16 but we are still encouraging masking at the event when social distancing is not possible and otherwise,
-                    team members should mask at their own discretion.  Agiliti will provide KN95 (or similar) masks onsite to those who wish to use them and hand sanitizer will be readily available throughout
-                    the week.  We are providing optional onsite COVID-19 testing throughout the week. If you are symptomatic, visit the health and safety station in Huntington A on floor 4 from 8 a.m. to 4 p.m.
-                    Tuesday through Thursday.
-                </p>
-                <p>
-                    Thank you for your continued understanding and patience as we respond to COVID-19.
-                </p>
+                <div id="healthandsafetyTextarea"></div>
             </div>
             <div class="modal-footer bg-blur">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

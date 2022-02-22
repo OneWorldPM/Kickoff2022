@@ -21,13 +21,21 @@ $(function(){
 
 
     get_agenda();
+    get_health_and_safety();
 })
 
 function get_agenda(){
-   $.post(base_url+'/admin/homepage_setting/getAgenda',{},
+   $.post(base_url+'/admin/homepage_setting/getModalContents',{},
        function(data){
 
        // console.log(data[0].agenda);
            $('#agendaText').html(data[0].agenda);
    },'json')
+}
+
+function get_health_and_safety(){
+    $.post(base_url+'/admin/homepage_setting/getModalContents',{},
+        function(data){
+            $('#healthandsafetyTextarea').html(data[0].healthandsafety);
+        },'json')
 }
