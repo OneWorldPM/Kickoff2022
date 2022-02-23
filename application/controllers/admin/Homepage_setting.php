@@ -15,11 +15,11 @@ class Homepage_setting extends CI_Controller {
 
     public function index(){
 
-        $agenda = $this->home_model->getAgenda();
-        if($agenda){
-            $data['agenda'] = $agenda[0]->agenda;
+        $modal_contents = $this->home_model->get_modal_contents();
+        if($modal_contents){
+            $data['modal_contents'] = $modal_contents[0];
         }else{
-            $data['agenda']='';
+            $data['modal_contents']='';
         }
 
         $this->load->view('admin/header');
@@ -36,7 +36,7 @@ class Homepage_setting extends CI_Controller {
     }
 
     public function getModalContents(){
-        $result = $this->home_model->getAgenda();
+        $result = $this->home_model->get_modal_contents();
         if(!empty($result)){
             echo json_encode($result);
         }else{

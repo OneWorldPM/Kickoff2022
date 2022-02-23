@@ -36,11 +36,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <textarea id="agendaText"><?=(isset($agenda) && !empty ($agenda))?$agenda:''?></textarea>
+                <textarea id="agendaText"><?=(isset($modal_contents->agenda) && !empty ($modal_contents->agenda))?$modal_contents->agenda:''?></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" id="saveHealthAndSafety">Save changes</button>
+                <button type="button" class="btn btn-success" id="saveAgenda">Save changes</button>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <textarea id="health-and-safetyText"><?=(isset($healthandsafety) && !empty ($healthandsafety))?$healthandsafety:''?></textarea>
+                <textarea id="health-and-safetyText"><?=(isset($modal_contents->healthandsafety) && !empty ($modal_contents->healthandsafety))?$modal_contents->healthandsafety:''?></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

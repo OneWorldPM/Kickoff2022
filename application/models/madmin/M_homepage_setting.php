@@ -6,7 +6,7 @@ class M_homepage_setting extends CI_Model {
         parent::__construct();
     }
 
-    function getAgenda(){
+    function get_modal_contents(){
         $agenda = $this->db->select('*')
             ->get('homepage_setting');
 
