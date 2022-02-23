@@ -113,8 +113,8 @@
     <div class="row" style="margin-top: 1%">
         <div class="col-md-12 text-center">
             <div class="text-neon">
-             <p style="color: white; font-size: 20px">  2022 Commercial Kickoff starts in: </p>
-            <p  style="color: white; font-size: 40px" id="countdown-timer"></p>
+           <!--  <p style="color: white; font-size: 20px">  2022 Commercial Kickoff starts in: </p>
+            <p  style="color: white; font-size: 40px" id="countdown-timer"></p>-->
             </div><br>
             <img class="" src="<?= base_url() ?>front_assets/agility/agility_neon_banner.png" style="width: 100%;">
         </div>
