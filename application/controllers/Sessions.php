@@ -25,10 +25,10 @@ class Sessions extends CI_Controller {
 
         $today = date('Y-m-d');
 
-        if ($today < '2021-02-23')
-            $today = '2021-02-23';
-        if ($today > '2021-02-25')
-            $today = '2021-02-25';
+        if ($today < '2022-02-23')
+            $today = '2022-02-23';
+        if ($today > '2022-02-25')
+            $today = '2022-02-25';
 
         redirect(base_url('sessions/getsessions_data/'.$today)); // Don't need to list all sessions, so redirecting to specific dates
 

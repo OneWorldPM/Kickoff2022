@@ -93,6 +93,8 @@ class M_user extends CI_Model {
     }
 
     function updateCustomer($post) {
+        
+
         $set = array(
             'first_name' => trim($post['first_name']),
             'last_name' => trim($post['last_name']),
@@ -103,6 +105,8 @@ class M_user extends CI_Model {
             'email' => trim($post['email']),
             'status' => 1
         );
+
+
         $this->db->update("customer_master", $set, array('cust_id' => $post['cid']));
 
         if($this->db->affected_rows() > 0)
@@ -131,4 +135,13 @@ class M_user extends CI_Model {
         }
     }
 
+    function export_registrants(){
+        $registrants = $this->db->select('*')
+            ->get('customer_master');
+
+        if($registrants->num_rows() > 0)
+            return $registrants;
+        else
+            return '';
+    }
 }

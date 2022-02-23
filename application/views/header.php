@@ -44,6 +44,61 @@
         <link href="<?= base_url() ?>assets/alertify/alertify.core.css" rel="stylesheet" type="text/css" />
         <link href="<?= base_url() ?>assets/alertify/alertify.default.css" rel="stylesheet" type="text/css" />
         <style>
+
+            .home-icon{
+                box-shadow: -10px 10px 50px  #FF7C27;
+                border-radius: 100px;
+                padding: 10px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                background-color: white;
+                padding-bottom: 25px;
+                padding-top: 25px;
+                width: 165px;
+                height: 165px;
+            }
+
+            .icon-text{
+                margin-top: 15px;
+                color: #012547;
+                font-size: 15px;
+                font-weight: 400;
+            }
+            .home-icon-fa{
+                font-size: 60px
+                !important; color: #01426a;
+            }
+
+            .text-neon{
+                color: white;
+                text-shadow: 0 0 20px #fff, 0 0 20px orangered, 0 0 20px orangered, 0 0 20px orangered, 0 0 20px orangered;
+            }
+            .text-neon-blue {
+                color: white;
+                text-shadow: 0 0 20px #fff, 0 0 20px deepskyblue, 0 0 20px deepskyblue, 0 0 20px deepskyblue, 0 0 20px deepskyblue;
+                text-decoration: underline deepskyblue;
+            }
+            .bg-brick{
+                background-image: url("<?=base_url()?>front_assets/agility/Agility_login_background.png");
+                color: white;
+                border-radius: 10px;
+            }
+
+            .bg-blur {
+                backdrop-filter: blur(1px);
+            }
+
+            .border-white {
+                box-shadow: inset 0 0 10px 10px white;
+                padding: 10px;
+                border-radius: 10px  ;
+            }
+            .tb-title{
+                line-height: 50px;
+            }
+
+
+
             @media (min-width: 1200px){
                 .container {
                     width: 1300px;
@@ -301,8 +356,12 @@
                                         <li><a href="https://yourconference.live/support/submit_ticket" target="_blank">SUPPORT</a></li>
                                     </ul>
 
+                                    <ul class="main-menu nav navbar-nav navbar-right" style="">
+                                        <li><a href="<?=base_url()?>prework">PREWORK RESOURCES</a></li>
+                                    </ul>
+
                                     <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="<?= base_url() ?>front_assets/agility/2021+Commercial+Kickoff+Agenda+and+Session+Overview-compressed.pdf" target="_blank">AGENDA</a></li>
+                                        <li><a href="" id="header_agenda">AGENDA</a></li>
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
@@ -330,3 +389,5 @@
             </header>
             <!-- END: HEADER -->
             <script src="https://kit.fontawesome.com/fd91b3535c.js" crossorigin="anonymous"></script>
+            <script src="<?=base_url()?>front_assets/js/home-new.js?v=2"></script>
+            <?php $this->load->view('home-new-modal'); ?>

@@ -15,6 +15,10 @@
 </head>
 
 <style>
+    .zoom {
+      overflow: scroll;
+    }
+
     @media (max-width: 750px) {
         .text-right {
             text-align: center !important;
@@ -73,6 +77,9 @@
 <!--        </ul>-->
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="#" id="header_agenda" style="color: black">AGENDA</a></li>
+        </ul>
+        <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
+            <li><a style="color: black" href="<?=base_url()?>prework" id="header_agenda">PREWORK RESOURCES</a></li>
         </ul>
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="https://yourconference.live/support/submit_ticket" target="_blank" style="color: black;">SUPPORT</a></li>
@@ -184,12 +191,12 @@
 
         <div class="row text-center" style="margin-top: 5%">
 
-       <!--     <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="location.href='<?/*= base_url() */?>sessions/prework'">
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>sessions/prework'">
                     <i class="fas fa-clipboard-list home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">PREWORK</div>
                 </div>
-            </div>-->
+            </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2" >
                 <div class="home-icon m-sm-auto" id="agendaBtn">
@@ -199,7 +206,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
                 <div class="home-icon m-sm-auto" id="activityBtn">
-                    <img src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
+                    <img class="activities_attire" src="<?=base_url()?>front_assets/agility/Agility_activities.png" width="62px">
                     <div class="icon-text">ACTIVITIES & ATTIRE</div>
                 </div>
             </div>
@@ -209,27 +216,28 @@
                     <div class="icon-text">TRAVEL & HOTEL</div>
                 </div>
             </div>
-<!--
-            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
-                    <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>
-                    <div class="icon-text">TRAINING</div>
-                </div>
-            </div>-->
+
+
 <!---->
- <!--           <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="/*location.href='<?/*= base_url() */?>//sessions/event_extras'*/">
-                   <img src="<?/*=base_url()*/?>front_assets/agility/heart_in_hand.png" width="62px">
-                    <div class="icon-text">Extras</div>
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
+                <div class="home-icon m-sm-auto" onclick="location.href='<?= base_url() ?>//sessions/event_extras'">
+                   <img class="heart_in_hand" src="<?=base_url()?>front_assets/agility/heart_in_hand.png" width="62px">
+                    <div class="icon-text">EVENT EXTRAS</div>
                 </div>
             </div>
 
+<!--               <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">-->
+<!--               <div class="home-icon m-sm-auto" onclick="">-->
+<!--                   <i class="fas fa-chalkboard-teacher home-menu-icon home-icon-fa"></i>-->
+<!--                   <div class="icon-text">TRAINING</div>-->
+<!--               </div>-->
+<!--           </div>-->
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-sm-2">
-                <div class="home-icon m-sm-auto" onclick="">
+                <div class="home-icon m-sm-auto" onclick="redirectToSessions()">
                     <i class="fas fa-users-class home-menu-icon home-icon-fa"></i>
                     <div class="icon-text">SESSIONS</div>
                 </div>
-            </div>-->
+            </div>
 <!---->
 <!--            <div class="col-lg-3 col-md-4 col-sm-6 text-center mt-sm-2">-->
 <!--                <div class="home-icon m-sm-auto" onclick="showEventPhotosVideo('517591955');">-->
@@ -259,6 +267,14 @@
 <!--                </div>-->
 <!--            </div>-->
 
+
+            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
+                <div class="home-icon m-sm-auto float-lg-none" id="health_safety">
+                    <i class="fas fa-notes-medical home-menu-icon home-icon-fa"></i>
+                    <div class="icon-text">HEALTH & SAFETY</div>
+                </div>
+            </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >
                 <div class="home-icon m-sm-auto float-lg-none " onclick="window.open('https://yourconference.live/support/submit_ticket', '_blank')">
                     <i class="fas fa-info-circle home-menu-icon home-icon-fa"></i>
@@ -266,26 +282,15 @@
                 </div>
             </div>
 
+<!--            <div class="col-lg-3 col-md-6 col-sm-6 text-center mt-2" >-->
+<!--                <div class="home-icon m-sm-auto float-lg-none " onclick="">-->
+<!--                    <i class="fas fa-person-booth home-menu-icon home-icon-fa"></i>-->
+<!--                    <div class="icon-text">PHOTO BOOTH</div>-->
+<!--                </div>-->
+<!--            </div>-->
+
         </div>
     <?php endif; ?>
-
-<!--    <div class="row text-center">-->
-<!---->
-<!--        <div class="col-md-6 text-right">-->
-<!--            <div class="text-center" style="border: 1px solid white;border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;">-->
-<!--                <i class="fas fa-info-circle" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">INFORMATION</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--        <div class="col-md-12">-->
-<!--            <div class="text-center" style="border-radius: 25px;padding: 10px;margin-bottom:5px;width: 175px;display: inline-block;cursor: pointer;" onclick="location.href='/support'">-->
-<!--                <i class="fas fa-cog" style="font-size: 95px !important; color: #009ce9;"></i>-->
-<!--                <div style="margin-top: 15px;color: white;font-size: 20px;">SUPPORT</div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
 
 </div> <!-- /container -->
 
@@ -307,7 +312,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
-<script src="<?=base_url()?>front_assets/js/home-new.js"></script>
+<script src="<?=base_url()?>front_assets/js/home-new.js?v=2"></script>
 </body>
 
 <script>
@@ -577,7 +582,28 @@
 <script src="https://player.vimeo.com/api/player.js"></script>
 
     <script>
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
         $(function() {
+
+            countdown_timer();
 
             <?php if($welcome_msg == 'unread'): ?>
 
@@ -683,5 +709,72 @@
         }
 
     </script>
+
+<!-- ######## STYLE SCRIPT #########-->
+<script>
+    $(function(){
+        $('.activities_attire').hover(function(){
+             $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/activities_attire_hover.png");
+        })
+        $('.activities_attire').mouseleave(function(){
+            $('.activities_attire').attr('src',"<?=base_url()?>front_assets/agility/Agility_activities.png");
+        })
+
+        $('.heart_in_hand').hover(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand_hover.png");
+        })
+        $('.heart_in_hand').mouseleave(function(){
+            $('.heart_in_hand').attr('src',"<?=base_url()?>front_assets/agility/heart_in_hand.png");
+        })
+    })
+
+
+    function redirectToSessions() {
+        toastr.info('Please wait...');
+
+        let to_date = '2022-02-23';
+        if ('<?=date('Y-m-d')?>' > '2022-02-23')
+        {
+            to_date = '<?=date('Y-m-d')?>';
+        }
+        if ('<?=date('Y-m-d')?>' > '2022-02-24')
+        {
+            to_date = '2022-02-24';
+        }
+
+        window.location = `<?=base_url()?>sessions/getsessions_data/${to_date}`;
+    }
+
+    function countdown_timer(){
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 22, 2022 15:37:25").getTime();
+
+// Update the count down every 1 second
+        var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown-timer").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown-timer").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    }
+</script>
 
 </html>

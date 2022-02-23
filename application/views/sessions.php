@@ -128,9 +128,8 @@ if (isset($_GET['testing']))
                             }
                         </style>
                         <?php $current_date = $this->uri->segment(3); ?>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-23')?'selected-date-btn':''?>">February 23</button></a>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-24')?'selected-date-btn':''?>">February 24</button></a>
-                        <a href="<?=base_url()?>sessions/getsessions_data/2021-02-25"><button class="btn btn-warning date-btn <?=($current_date == '2021-02-25')?'selected-date-btn':''?>">February 25</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-23"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-23')?'selected-date-btn':''?>">February 23</button></a>
+                        <a href="<?=base_url()?>sessions/getsessions_data/2022-02-24"><button class="btn btn-warning date-btn <?=($current_date == '2022-02-24')?'selected-date-btn':''?>">February 24</button></a>
                     </div>
                 </div> 
             </div>
@@ -153,7 +152,7 @@ if (isset($_GET['testing']))
                                                 <?php
                                                 if($val->sessions_date >= date('Y-m-d') && $val->sessions_id != 7)
                                                 { ?>
-                                                    <a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
+                                                    <a href="#"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
                                                     <?php
                                                 }else{ ?>
                                                     <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>
@@ -166,11 +165,11 @@ if (isset($_GET['testing']))
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> CT</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot)- 60*180)?> - <?=date("h:i A", strtotime($val->end_time) - 60*180) ?> PT</span>
                                                         <?php
                                                         if ($val->us_emea_switch == 1)
                                                         { ?>
-                                                            <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> CT</span>
+                                                            <span style="color: #b97a43;">US/EMEA <?= $val->sessions_date_display_us_emea . ' ' . date("h:i A", strtotime($val->start_time_display_us_emea))?> <?=($val->sessions_type_id == 1)?'':' - ' . date("h:i A", strtotime($val->end_time_display_us_emea)) ?> ET</span>
                                                         <?php
                                                         }
 
@@ -193,12 +192,12 @@ if (isset($_GET['testing']))
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
                                                         <?php if($val->sessions_id != 7){ ?>
-                                                        <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php }else{ ?>
-                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php }
                                                     }else{ ?>
-                                                        <h3><span href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></span></h3>
+                                                        <h3 style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></h3>
                                                         <?php
                                                     }
                                                     ?>
@@ -223,11 +222,11 @@ if (isset($_GET['testing']))
                                                 <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
                                             <?php
                                             }else{ ?>
-                                                <?php if($val->sessions_id != 7){ ?>
+                                                <?php if(($val->sessions_id != 7 ) && 1 == 2){ ?>
                                                     <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
                                                 <?php }else{ ?>
-                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>
-                                                    <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;margin-right: 5px;" href="https://interactiveparty.zoom.us/j/84915974657?pwd=NVBGa3huaGhacmVvQW15S3BPN0NtZz09" target="_blank"><span>Bingo Room 1</span></a>
+                                                    <!--<a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="https://interactiveparty.zoom.us/j/87478148962?pwd=NTMzbGM1SFlzZ2FOdDhyNCt2TVVRdz09" target="_blank"><span>Bingo Room 2</span></a>-->
+                                                    <!--<a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;margin-right: 5px;" href="https://interactiveparty.zoom.us/j/84915974657?pwd=NVBGa3huaGhacmVvQW15S3BPN0NtZz09" target="_blank"><span>Bingo Room 1</span></a>-->
                                                 <?php } ?>
                                             <?php
                                             }
@@ -293,6 +292,30 @@ if (isset($_GET['testing']))
         </div>
     </div>
 </div>
+
+<!-- Facilitators Modal -->
+<div class="modal fade" id="facilitatorsModal" tabindex="-1" aria-labelledby="facilitatorsModalLabel" aria-hidden="true" >
+    <div class="modal-dialog modal-lg border-white" style="max-width: 100%; width: 100%">
+        <div class="modal-content bg-brick">
+            <div class="modal-header bg-blur">
+                <h5 class="modal-title text-neon" id="facilitatorsModalLabel" >Facilitators: The Brevit Group</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body bg-blur">
+                <div id="agendaText"></div>
+                <img src="<?=base_url()?>front_assets/agility/Brevit_group.jpg" style="width: 100%">
+            </div>
+            <div class="modal-footer bg-blur">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var base_url = "<?=base_url()?>";
+</script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('#social_link_div').addClass('hidden');
@@ -410,4 +433,10 @@ if (isset($_GET['testing']))
             }
         });
     });
+
+    $('#facilitators-link').click(function(e){
+        e.preventDefault();
+        $('#facilitatorsModal').modal('show');
+    })
 </script>
+

@@ -132,7 +132,7 @@ if (isset($_GET['testing']))
                                                 <?php
                                                 if($val->sessions_date >= date('Y-m-d'))
                                                 { ?>
-                                                    <a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
+                                                    <a href="<?=$val->zoom_redirect_url?>" target="_blank"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
                                                     <?php
                                                 }else{ ?>
                                                     <a href="#"> <?php if ($val->sessions_photo != "") { ?> <img alt="" src="<?= base_url() ?>uploads/sessions/<?= $val->sessions_photo ?>"> <?php } else { ?>  <img alt="" src="<?= base_url() ?>front_assets/images/session_avtar.jpg"> <?php } ?>  </a>
@@ -145,7 +145,7 @@ if (isset($_GET['testing']))
 
                                                 <div class="post-title">
                                                     <h6 style="font-weight: 600">
-                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", strtotime($val->time_slot))?> - <?=date("h:i A", strtotime($val->end_time)) ?> CT</span>
+                                                        <span style="color: #b97a43;"><?= $val->sessions_date . ' ' . date("h:i A", (strtotime($val->time_slot) + 60*180))?> - <?=date("h:i A", strtotime($val->end_time) + 60*180) ?> EST</span>
                                                         <?php
                                                         if ($val->us_emea_switch == 1)
                                                         { ?>
@@ -171,7 +171,7 @@ if (isset($_GET['testing']))
                                                     <?php
                                                     if($val->sessions_date >= date('Y-m-d') || $val->session_reply == 1)
                                                     { ?>
-                                                        <h3><a href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
+                                                        <h3><a href="<?=$val->zoom_redirect_url?>" target="_blank" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
                                                         <?php
                                                     }else{ ?>
                                                         <h3><a href="#" style="color: #f69240; font-weight: 900;"><?= $val->session_title ?></a></h3>
@@ -192,17 +192,13 @@ if (isset($_GET['testing']))
                                                 <div class="post-description">
                                                     <?= $val->sessions_description ?>
                                                 </div>
+
+                                                <div class="post-description">
+                                                    <a style="color: #0e90d2; " href="<?=base_url()?>prework"><strong style="text-decoration: underline">PREWORK RESOURCES</strong></a>
+                                                </div>
+                                             
                                             </div>
-                                            <?php
-                                            if($val->sessions_date >= date('Y-m-d'))
-                                            { ?>
-                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>Attend</span></a>
-                                            <?php
-                                            }elseif ($val->session_reply == 1){ ?>
-                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
-                                            <?php
-                                            }
-                                            ?>
+                                                <a class="button black-light button-3d rounded right" target="_blank" style="margin: 0px 0;background-color: #f69240;border-color: #f69240;" href="<?=$val->zoom_redirect_url?>"><span>View</span></a>
                                         </div>
                                         <?php
                                     }

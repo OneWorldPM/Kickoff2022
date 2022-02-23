@@ -579,6 +579,7 @@ $user_role = $this->session->userdata('role');
     tinymce.init({
         selector: '#sessions_description',
         height : "300",
-        theme_advanced_font_sizes : "10px,12px,14px,16px,24px"
+        theme_advanced_font_sizes : "10px,12px,14px,16px,24px",
+        plugins: 'code link',
     });
 </script>
