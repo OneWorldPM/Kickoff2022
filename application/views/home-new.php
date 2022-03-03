@@ -733,14 +733,14 @@
         toastr.info('Please wait...');
 
         let to_date = '2022-02-23';
-        if ('<?=date('Y-m-d')?>' > '2022-02-23')
-        {
-            to_date = '<?=date('Y-m-d')?>';
-        }
-        if ('<?=date('Y-m-d')?>' > '2022-02-24')
-        {
-            to_date = '2022-02-24';
-        }
+        //if ('<?//=date('Y-m-d')?>//' > '2022-02-23')
+        //{
+        //    to_date = '<?//=date('Y-m-d')?>//';
+        //}
+        //if ('<?//=date('Y-m-d')?>//' > '2022-02-24')
+        //{
+        //    to_date = '2022-02-24';
+        //}
 
         window.location = `<?=base_url()?>sessions/getsessions_data/${to_date}`;
     }
