@@ -357,7 +357,7 @@
                                     </ul>
 
                                     <ul class="main-menu nav navbar-nav navbar-right" style="">
-                                        <li><a href="<?=base_url()?>prework">PREWORK RESOURCES</a></li>
+                                        <li><a href="<?=base_url()?>prework">RESOURCES</a></li>
                                     </ul>
 
 <!--                                    <ul class="main-menu nav navbar-nav navbar-right">-->

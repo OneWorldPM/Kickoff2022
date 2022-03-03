@@ -79,7 +79,7 @@
 <!--            <li><a href="#" id="header_agenda" style="color: black">AGENDA</a></li>-->
 <!--        </ul>-->
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
-            <li><a style="color: black" href="<?=base_url()?>prework" id="header_agenda">PREWORK RESOURCES</a></li>
+            <li><a style="color: black" href="<?=base_url()?>prework" id="header_agenda">RESOURCES</a></li>
         </ul>
         <ul class="main-menu nav navbar-nav" style="margin-right:20px;">
             <li><a href="https://yourconference.live/support/submit_ticket" target="_blank" style="color: black;">SUPPORT</a></li>
