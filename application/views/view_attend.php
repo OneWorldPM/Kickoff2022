@@ -235,6 +235,7 @@ $time_zone = "EST";
 
 <input type="hidden" id="timer_status" value="1">
 <script type="text/javascript">
+    let base_url = '<?=base_url()?>';
     let session_type_id = "<?=$sessions->sessions_type_id?>";
     let zoom_redirect = "<?=$sessions->zoom_redirect?>";
     let zoom_redirect_url = "<?=$sessions->zoom_redirect_url?>";
