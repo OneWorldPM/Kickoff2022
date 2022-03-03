@@ -97,6 +97,7 @@
                     <a href="<?=base_url()?>uploads/prework_resources/04_Business Review Simulation Template Final.pptx"><button class="btn btn-warning prework-btn">04_Business Review Simulation Template Final </button></a>
                     <a href="https://player.vimeo.com/video/677358460?h=863eb72c4d" target="_blank"><button class="btn btn-warning prework-btn"> 05_Business Review Overview Video Final </button></a>
                     <a href="<?=base_url()?>uploads/prework_resources/Commercial_Kickoff_2022-Refresh_Webinar_Worksheet.pdf" target="_blank"><button class="btn btn-warning prework-btn">06_Commercial Kickoff2022 Refresh Webinar Worksheet </button></a>
+                    <a href="<?=base_url()?>uploads/prework_resources/Commercial_Kickoff_2022-Summary_Slides.pdf" target="_blank"><button class="btn btn-warning prework-btn">07_Commercial Kickoff2022 Summary Slides</button></a>
                 </div>
             </div>
 </section>
