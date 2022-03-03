@@ -360,9 +360,9 @@
                                         <li><a href="<?=base_url()?>prework">PREWORK RESOURCES</a></li>
                                     </ul>
 
-                                    <ul class="main-menu nav navbar-nav navbar-right">
-                                        <li><a href="" id="header_agenda">AGENDA</a></li>
-                                    </ul>
+<!--                                    <ul class="main-menu nav navbar-nav navbar-right">-->
+<!--                                        <li><a href="" id="header_agenda">AGENDA</a></li>-->
+<!--                                    </ul>-->
 
                                     <ul class="main-menu nav navbar-nav navbar-right">
                                         <li><a href="<?= base_url() ?>home">LOBBY</a></li>
