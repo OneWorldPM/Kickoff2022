@@ -9,7 +9,7 @@
     }
 </style>
 
-<section class="parallax" style="background: url('<?= base_url() ?>front_assets/images/pres_bg.jpg') no-repeat;">
+<section class="parallax" style="background: url('<?=base_url()?>front_assets/agility/Agility_login_background.png') no-repeat;">
     <!--<section class="parallax" style="background-image: url(<?= base_url() ?>front_assets/images/Sessions_BG_screened.jpg); top: 0; padding-top: 0px;">-->
     <div class="container-fullscreen">
         <!-- CONTENT -->
