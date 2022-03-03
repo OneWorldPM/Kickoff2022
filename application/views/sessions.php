@@ -219,7 +219,7 @@ if (isset($_GET['testing']))
                                             <?php
                                             if($val->session_reply == 1)
                                             { ?>
-                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>"><span>View</span></a>
+                                                <a class="button black-light button-3d rounded right" style="margin: 0px 0;background-color: #4087f6;border-color: #79acfb;" href="<?= base_url() ?>sessions/attend/<?= $val->sessions_id ?>" target="_blank"><span>View</span></a>
                                             <?php
                                             }else{ ?>
                                                 <?php if(($val->sessions_id != 7 ) && 1 == 2){ ?>
