@@ -194,7 +194,7 @@ if (isset($_GET['testing']))
                                                 </div>
 
                                                 <div class="post-description">
-                                                    <a style="color: #0e90d2; " href="<?=base_url()?>prework"><strong style="text-decoration: underline">PREWORK RESOURCES</strong></a>
+                                                    <a style="color: #0e90d2; " href="<?=base_url()?>prework"><strong style="text-decoration: underline">RESOURCES</strong></a>
                                                 </div>
                                              
                                             </div>
