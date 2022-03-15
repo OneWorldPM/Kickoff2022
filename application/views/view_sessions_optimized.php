@@ -28,7 +28,7 @@
                             <?php
                             if ($sessions->session_reply == 1)
                             { ?>
-                                <div style="padding:56.25% 0 0 0;"><iframe src="https://player.vimeo.com/video/<?=$sessions->reply_video_id?>?loop=1&title=0&byline=0&portrait=0&muted=1&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                                <div style="padding:56.25% 0 0 0;"><iframe src="https://player.vimeo.com/video/<?=$sessions->reply_video_id?>?loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
                             <?php
                             }else{ ?>
                                 <?=isset($sessions) ? '<iframe src="https://viewer.millicast.com/v2?streamId=pYVHx2/'.str_replace(' ', '', $sessions->embed_html_code).'&autoPlay=true&muted=true&disableFull=true" width="100%" height="100%"></iframe>' : "" ?>
